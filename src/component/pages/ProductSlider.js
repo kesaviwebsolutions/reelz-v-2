@@ -15,12 +15,9 @@ import nftdemo from "../Image/nftdemo.jpg";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillHandbagFill } from "react-icons/bs";
 
-LiveAutions.propTypes = {
-  data: PropTypes.array,
-};
 
 function LiveAutions() {
-  const [modalShow, setModalShow] = useState(false);
+
 
 
   return (
@@ -30,28 +27,27 @@ function LiveAutions() {
    
           <div className="col-md-12 wow fadeInUp">
             <Swiper
-              modules={[Navigation, Scrollbar, A11y, Pagination]}
+              modules={[ Scrollbar, A11y]}
               spaceBetween={30}
+              slidesPerView={5}
               breakpoints={{
                 0: {
                   slidesPerView: 1,
                 },
-                767: {
+                600: {
                   slidesPerView: 2,
                 },
-                991: {
+                1200: {
                   slidesPerView: 3,
                 },
-                1300: {
+                1536: {
                   slidesPerView: 4,
                 },
               }}
               className="live-auction visible"
-              navigation
+              
               loop={true}
-              pagination={{
-                clickable: true,
-              }}
+           
             >
           
                 <SwiperSlide >
@@ -75,7 +71,35 @@ function LiveAutions() {
                         <div className="product-button">
                           <Link to="/product-details" className="tf-button">
                             {" "}
-                            <button className="secondary-btn"><BsFillHandbagFill />Buy Now</button> 
+                            <button className="secondary-btn"><BsFillHandbagFill className="b-c-t bag-icon" /> &nbsp;Buy Now</button> 
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide >
+                  <div className="slider-item">
+                    <div className="sc-product style1">
+                      <div className="top">
+                        <Link to="/product-details" className="tag">
+                       Archetype #588
+                        </Link>
+                        <div className="wish-list">
+                          <Link to="#" className="heart-icon"><AiFillHeart /></Link>
+                        </div>
+                      </div>
+                      <div className="features">
+                        <div className="product-media">
+                          <img src={nftdemo} alt="images" />
+                        </div>
+               
+                      </div>
+                      <div className="bottom">
+                        <div className="product-button">
+                          <Link to="/product-details" className="tf-button">
+                            {" "}
+                            <button className="secondary-btn"><BsFillHandbagFill className="b-c-t bag-icon" /> &nbsp;Buy Now</button> 
                           </Link>
                         </div>
                       </div>
@@ -90,7 +114,7 @@ function LiveAutions() {
                      Archetype #588
                       </Link>
                       <div className="wish-list">
-                        <Link to="#" className="heart-icon"></Link>
+                        <Link to="#" className="heart-icon"><AiFillHeart /></Link>
                       </div>
                     </div>
                     <div className="features">
@@ -103,7 +127,7 @@ function LiveAutions() {
                       <div className="product-button">
                         <Link to="/product-details" className="tf-button">
                           {" "}
-                          <span className="icon-btn-product"></span> Buy Now
+                          <button className="secondary-btn"><BsFillHandbagFill className="b-c-t bag-icon" /> &nbsp;Buy Now</button> 
                         </Link>
                       </div>
                     </div>
@@ -118,7 +142,7 @@ function LiveAutions() {
                    Archetype #588
                     </Link>
                     <div className="wish-list">
-                      <Link to="#" className="heart-icon"></Link>
+                      <Link to="#" className="heart-icon"><AiFillHeart /></Link>
                     </div>
                   </div>
                   <div className="features">
@@ -131,7 +155,7 @@ function LiveAutions() {
                     <div className="product-button">
                       <Link to="/product-details" className="tf-button">
                         {" "}
-                        <span className="icon-btn-product"></span> Buy Now
+                        <button className="secondary-btn"><BsFillHandbagFill className="b-c-t bag-icon" /> &nbsp;Buy Now</button> 
                       </Link>
                     </div>
                   </div>
@@ -146,7 +170,7 @@ function LiveAutions() {
                  Archetype #588
                   </Link>
                   <div className="wish-list">
-                    <Link to="#" className="heart-icon"></Link>
+                    <Link to="#" className="heart-icon"><AiFillHeart /></Link>
                   </div>
                 </div>
                 <div className="features">
@@ -159,69 +183,14 @@ function LiveAutions() {
                   <div className="product-button">
                     <Link to="/product-details" className="tf-button">
                       {" "}
-                      <span className="icon-btn-product"></span> Buy Now
+                      <button className="secondary-btn"><BsFillHandbagFill className="b-c-t bag-icon" /> &nbsp;Buy Now</button> 
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide >
-          <div className="slider-item">
-            <div className="sc-product style1">
-              <div className="top">
-                <Link to="/product-details" className="tag">
-               Archetype #588
-                </Link>
-                <div className="wish-list">
-                  <Link to="#" className="heart-icon"></Link>
-                </div>
-              </div>
-              <div className="features">
-                <div className="product-media">
-                  <img src={nftdemo} alt="images" />
-                </div>
-       
-              </div>
-              <div className="bottom">
-                <div className="product-button">
-                  <Link to="/product-details" className="tf-button">
-                    {" "}
-                    <span className="icon-btn-product"></span> Buy Now
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide >
-        <div className="slider-item">
-          <div className="sc-product style1">
-            <div className="top">
-              <Link to="/product-details" className="tag">
-             Archetype #588
-              </Link>
-              <div className="wish-list">
-                <Link to="#" className="heart-icon"></Link>
-              </div>
-            </div>
-            <div className="features">
-              <div className="product-media">
-                <img src={nftdemo} alt="images" />
-              </div>
      
-            </div>
-            <div className="bottom">
-              <div className="product-button">
-                <Link to="/product-details" className="tf-button">
-                  {" "}
-                  <span className="icon-btn-product"></span> Buy Now
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
             
             </Swiper>
           </div>

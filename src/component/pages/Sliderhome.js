@@ -15,7 +15,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-6">
-                            <div className="">
+                            <div className="m-t-5">
                                 <div className="f-s-3 f-w-600">
                                     Nulla quis lorem ut libero malesuada feugiat.
                                 </div>
@@ -24,7 +24,7 @@ export default function App() {
                                 <div className=""><button className="primary-btn m-t-3">Explore Now</button></div>
                             </div>
                         </div>
-                        <div className="col-12 col-sm-12 col-md-6">
+                        <div className="col-12 col-sm-12 col-md-6 m-q-b-d-n">
                         <div className="   m-a t-a-c">
                         <span className=" b-r-15 b-1 d-i-b pa-1">
                             <img src={Reelz} alt="" width="400px" className="reelz-gif m-a" />
@@ -33,41 +33,49 @@ export default function App() {
                         </div>
                     </div>
                 </SwiperSlide>
+            
                 <SwiperSlide>
-                    <div className="row">
-                        <div className="col-12 col-sm-12 col-md-6">
-                            <div className="">
-                                <div className="f-s-3 f-w-600">
-                                    Nulla quis lorem ut libero malesuada feugiat.
-                                </div>
-
-                                <div className="m-t-2"> Nulla quis lorem ut libero malesuada feugiat.</div>
-                                <div className=""><button className="primary-btn m-t-3">Explore Now</button></div>
+                <div className="row">
+                    <div className="col-12 col-sm-12 col-md-6">
+                        <div className="m-t-5">
+                            <div className="f-s-3 f-w-600">
+                                Nulla quis lorem ut libero malesuada feugiat.
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-12 col-md-6">
-                            <img src={Reelz} alt="" width="400px" className="reelz-gif m-a" />
+
+                            <div className="m-t-2"> Nulla quis lorem ut libero malesuada feugiat.</div>
+                            <div className=""><button className="primary-btn m-t-3">Explore Now</button></div>
                         </div>
                     </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="row">
-                        <div className="col-12 col-sm-12 col-md-6">
-                            <div className="">
-                                <div className="f-s-3 f-w-600">
-                                    Nulla quis lorem ut libero malesuada feugiat.
-                                </div>
-
-                                <div className="m-t-2"> Nulla quis lorem ut libero malesuada feugiat.</div>
-                                <div className=""><button className="primary-btn m-t-3">Explore Now</button></div>
-                            </div>
-                        </div>
-                        <div className="col-12 col-sm-12 col-md-6">
-                            <img src={Reelz} alt="" width="400px" className="reelz-gif m-a" />
+                    <div className="col-12 col-sm-12 col-md-6 m-q-b-d-n">
+                    <div className="   m-a t-a-c">
+                    <span className=" b-r-15 b-1 d-i-b pa-1">
+                        <img src={Reelz} alt="" width="400px" className="reelz-gif m-a" />
+                        </span>
                         </div>
                     </div>
-                </SwiperSlide>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="row">
+                <div className="col-12 col-sm-12 col-md-6">
+                    <div className="m-t-5">
+                        <div className="f-s-3 f-w-600">
+                            Nulla quis lorem ut libero malesuada feugiat.
+                        </div>
 
+                        <div className="m-t-2"> Nulla quis lorem ut libero malesuada feugiat.</div>
+                        <div className=""><button className="primary-btn m-t-3">Explore Now</button></div>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6 m-q-b-d-n">
+                <div className="   m-a t-a-c">
+                <span className=" b-r-15 b-1 d-i-b pa-1">
+                    <img src={Reelz} alt="" width="400px" className="reelz-gif m-a" />
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </SwiperSlide>
 
             </Swiper>
         </>

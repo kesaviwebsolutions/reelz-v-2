@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import Sliderhome from "./Sliderhome"
+import Collector from "./Collector";
 
 import ProductSlider from "./ProductSlider";
 import CategoriesSlider from "./CategoriesSlider";
@@ -20,6 +21,10 @@ function Home() {
           <div className="f-s-2 f-w-600 m-b-2">Products</div>
           <div className=""><ProductSlider /></div>
         </div>
+        <div className="section">
+        <div className="f-s-2 f-w-600 m-b-2">Top collector buys today</div>
+        <div className=""><Collector /></div>
+      </div>
       </div>
     </>
   );
