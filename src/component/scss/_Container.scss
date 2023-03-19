@@ -116,3 +116,6 @@ a {
     vertical-align: middle;
     margin-right: 6px;
 }
+a.nav.active{
+    color: var(--yellow) !important;
+}

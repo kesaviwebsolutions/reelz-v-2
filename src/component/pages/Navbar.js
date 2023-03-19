@@ -15,6 +15,7 @@ import walletconnect from "../Svg/walletconnect.svg";
 import "animate.css";
 
 import logo from "../Image/logo.webp";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -53,59 +54,59 @@ function Navbar() {
 
   return (
     <>
-    <div className="container-kws">
-      <div className="  navbar12  d-f a-i-c j-c-s-b p-y-1">
-        <div className="">
-          <ul className="l-s-t-n d-f a-i-c ">
-            <li className="m-r-4">
-              <img
-                src={logo}
-                alt=""
-                className="logo animate__animated animate__rubberBand w-7"
-              />
-            </li>
+      <div className="container-kws">
+        <div className="  navbar12  d-f a-i-c j-c-s-b p-y-1">
+          <div className="">
+            <ul className="l-s-t-n d-f a-i-c ">
+              <li className="m-r-4">
+                <img
+                  src={logo}
+                  alt=""
+                  className="logo animate__animated animate__rubberBand w-7"
+                />
+              </li>
 
-            <li className="m-r-2 c-p   m-q-b-d-n">Home</li>
-            
-            <li className="m-r-2 c-p   m-q-b-d-n">Products</li>
-            
-            <li className="m-r-2 c-p   m-q-b-d-n">FAQ</li>
-            
-            <li className="m-r-2 c-p   m-q-b-d-n">Contact</li>
-            
-            <li className="m-r-2 c-p   m-q-b-d-n">NFT's</li>
-            <li className="m-r-2 c-p   m-q-b-d-n">Login</li>
-          </ul>
-        </div>
-        <div className=" c-p ">
-          <ul className="l-s-t-n d-f a-i-c ">
+              <NavLink className="nav" to="/">  <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Home</li></NavLink>
+
+              <NavLink className="nav" to="/product">   <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Products</li></NavLink>
+
+              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">FAQ</li>
+
+              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Contact</li>
+
+              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">NFT's</li>
+              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Login</li>
+            </ul>
+          </div>
+          <div className=" c-p ">
+            <ul className="l-s-t-n d-f a-i-c ">
 
 
-          {/*   <li className="m-l-2 c-pq ">
+              {/*   <li className="m-l-2 c-pq ">
             <span className="" onClick={() => toggleTheme()}>{theme === "dark-theme" ? "Light mode" : "Dark mode"}</span>
             </li> */}
-            <li className="m-l-2 c-pq ">
-              {" "}
-              <Button
-                variant="primary"
-                onClick={handleShow2}
-                className=" pa-0_5 c-i b-c-i b-c-p-c-11 b-n"
-              >
-                Connect Wallet
-              </Button>
-            </li>
-            <li className="m-l-2 c-p   m-q-b-d-n "><CgProfile className="f-s-1_5" /></li>
-            <li className="m-l-2 c-p   m-q-b-d-n "><AiOutlineShoppingCart className="f-s-1_5" /></li>
-            <li className="m-l-2 c-p   m-q-b-d-n ">95R</li>
-            <li className="m-l-2 c-p   m-q-a-d-n ">
-              {" "}
-              <Button onClick={handleShow} className=" b-c-t c-i b-n pa-0">
-                <AiOutlineMenu />
-              </Button>
-            </li>
-          </ul>
+              <li className="m-l-2 c-pq ">
+                {" "}
+                <Button
+                  variant="primary"
+                  onClick={handleShow2}
+                  className=" pa-0_5 c-i b-c-i b-c-p-c-11 b-n f-w-600"
+                >
+                  Connect Wallet
+                </Button>
+              </li>
+              <li className="m-l-2 c-p   m-q-b-d-n "><CgProfile className="f-s-1_5" /></li>
+              <li className="m-l-2 c-p   m-q-b-d-n "><AiOutlineShoppingCart className="f-s-1_5" /></li>
+              <li className="m-l-2 c-p   m-q-b-d-n ">95R</li>
+              <li className="m-l-2 c-p   m-q-a-d-n ">
+                {" "}
+                <Button onClick={handleShow} className=" b-c-t c-i b-n pa-0">
+                  <AiOutlineMenu />
+                </Button>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
       </div>
 
       {/* ---------------mobile-navbar---------------------------------- */}

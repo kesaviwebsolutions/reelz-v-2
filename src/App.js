@@ -7,6 +7,7 @@ import "./App.scss";
 import Form1 from "./component/pages/Form1";
 import Page404 from "./component/pages/Page404";
 import Footer from "./component/pages/Footer";
+import Product from "./component/pages/Product";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/form" element={<Form1 />} />
+          <Route path="/product" element={<Product />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />
