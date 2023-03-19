@@ -9,7 +9,7 @@ import Page404 from "./component/pages/Page404";
 
 function App() {
   return (
-    <div className="container-kws">
+    <div className="">
       <Router>
         <Navbar />
         <Routes>

@@ -6,3 +6,113 @@
     transform: translate(-50%, -50%) !important;
 }
  
+.sc-product.style1 {
+    margin-bottom: 50px;
+}
+:root{
+    --product-color4: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%);
+    --primary-color4: #28303F;
+    --product-color2: #B9B8BB;
+    --primary-color5: #fff;
+    --product-color3: #B9B8BB;
+}
+
+
+.sc-product {
+    background: var(--product-color4);
+    border: 1.5px solid var(--primary-color4);
+    border-radius: 15px;
+    padding: 20px 18.5px 19px 18.5px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+.sc-product .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -2px;
+    margin-bottom: 15px;
+}
+.sc-product .top .tag {
+    font-family: "DM Sans";
+    font-weight: 700;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: var(--primary-color5);
+    transition: all 0.3s ease;
+}
+.sc-product .top .wish-list {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--product-color2);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.sc-product .top .wish-list a {
+    margin-top: 2px;
+}
+.sc-product .top .wish-list a {
+  
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--product-color3);
+}
+.sc-product .features {
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.sc-product .features .product-media {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.sc-product .features .product-media img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.sc-product .features .featured-countdown {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 50%;
+    top: unset;
+    bottom: 24px;
+    padding: 4px 17px 4px 17px;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 100px;
+}
+.sc-product .bottom .product-button a {
+    display: block;
+    text-align: center;
+    border-width: 2px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    border-width: 2px;
+    padding: 11px 10px 11px 10px;
+    background: transparent;
+    border-color: var(--product-color6);
+}
+.tf-button span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    position: relative;
+}
+.sc-product .bottom .product-button a span {
+    
+    font-size: 19px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
