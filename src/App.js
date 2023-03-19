@@ -8,6 +8,8 @@ import Form1 from "./component/pages/Form1";
 import Page404 from "./component/pages/Page404";
 import Footer from "./component/pages/Footer";
 import Product from "./component/pages/Product";
+import FAQ from "./component/pages/FAQ";
+import Contact from "./component/pages/Contact";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/form" element={<Form1 />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />

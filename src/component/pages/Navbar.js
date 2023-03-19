@@ -70,9 +70,9 @@ function Navbar() {
 
               <NavLink className="nav" to="/product">   <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Products</li></NavLink>
 
-              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">FAQ</li>
+              <NavLink className="nav" to="/faq">    <li className="m-r-2 c-p f-w-600   m-q-b-d-n">FAQ</li></NavLink>
 
-              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Contact</li>
+              <NavLink className="nav" to="/contact">     <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Contact</li></NavLink>
 
               <li className="m-r-2 c-p f-w-600   m-q-b-d-n">NFT's</li>
               <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Login</li>
