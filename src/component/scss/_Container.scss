@@ -6,24 +6,26 @@
     transform: translate(-50%, -50%) !important;
 }
  
-.sc-product.style1 {
-    margin-bottom: 50px;
-}
+
 :root{
     --product-color4: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%);
     --primary-color4: #28303F;
     --product-color2: #B9B8BB;
     --primary-color5: #fff;
     --product-color3: #B9B8BB;
+    --primary-color11: #28303F;
 }
 
+.b-c-p-c-11{
+    background-color: var(--primary-color11) !important;
+}
 
 .sc-product {
     background: var(--product-color4);
     border: 1.5px solid var(--primary-color4);
     border-radius: 15px;
     padding: 20px 18.5px 19px 18.5px;
-    margin-bottom: 30px;
+  
     transition: all 0.3s ease;
 }
 .sc-product .top {
@@ -31,7 +33,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: -2px;
-    margin-bottom: 15px;
+   
 }
 .sc-product .top .tag {
     font-family: "DM Sans";

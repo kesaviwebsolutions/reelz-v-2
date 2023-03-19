@@ -6,6 +6,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Dropdown from "react-bootstrap/Dropdown";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from 'react-icons/cg';
+import { RxCross2 } from 'react-icons/rx';
 
 
 import Modal from "react-bootstrap/Modal";
@@ -56,11 +57,11 @@ function Navbar() {
       <div className="  navbar12  d-f a-i-c j-c-s-b p-y-1">
         <div className="">
           <ul className="l-s-t-n d-f a-i-c ">
-            <li className="m-r-2">
+            <li className="m-r-4">
               <img
                 src={logo}
                 alt=""
-                className="logo animate__animated animate__rubberBand w-9"
+                className="logo animate__animated animate__rubberBand w-7"
               />
             </li>
 
@@ -80,15 +81,15 @@ function Navbar() {
           <ul className="l-s-t-n d-f a-i-c ">
 
 
-            <li className="m-l-2 c-pq ">
+          {/*   <li className="m-l-2 c-pq ">
             <span className="" onClick={() => toggleTheme()}>{theme === "dark-theme" ? "Light mode" : "Dark mode"}</span>
-            </li>
+            </li> */}
             <li className="m-l-2 c-pq ">
               {" "}
               <Button
                 variant="primary"
                 onClick={handleShow2}
-                className=" b-c-t pa-0_5 c-i b-c-i"
+                className=" pa-0_5 c-i b-c-i b-c-p-c-11 b-n"
               >
                 Connect Wallet
               </Button>
@@ -152,10 +153,11 @@ function Navbar() {
 
       <Modal show={show2} onHide={handleClose2} className="">
         <div className="">
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title className="t-a-c m-a c-i">
               Please Connect Your Wallet
             </Modal.Title>
+            <RxCross2 className="c-p" onClick={handleClose2} />
           </Modal.Header>
           <Modal.Body>
             {" "}
