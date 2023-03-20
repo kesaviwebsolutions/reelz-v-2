@@ -21,34 +21,20 @@ import { BsThreeDots } from "react-icons/bs";
 
 const columns = [
   { id: "Image", label: "Name", minWidth: 170 },
-  { id: "code", label: "Category", minWidth: 100 },
+  { id: "code", label: "Blockchain", minWidth: 100 },
   {
     id: "population",
-    label: "Blockchain",
+    label: "Author",
     minWidth: 170,
     align: "right",
     format: (value) => value.toLocaleString("en-US"),
   },
   {
     id: "size",
-    label: "Bid",
+    label: "Price",
     minWidth: 170,
     align: "right",
     format: (value) => value.toLocaleString("en-US"),
-  },
-  {
-    id: "density",
-    label: "Views",
-    minWidth: 170,
-    align: "right",
-    format: (value) => value.toFixed(2),
-  },
-  {
-    id: "density",
-    label: "Auction",
-    minWidth: 170,
-    align: "right",
-    format: (value) => value.toFixed(2),
   },
   {
     id: "density",
@@ -57,6 +43,8 @@ const columns = [
     align: "right",
     format: (value) => value.toFixed(2),
   },
+
+  
 ];
 
 function createData(name, code, population, size) {
@@ -111,7 +99,7 @@ function Profile() {
           <div className="">
             <div className="">
               <div className="m-b-2">
-                <div className="f-s-2 f-w-600">Inventory</div>
+                <div className="f-s-2 f-w-600">Favourites</div>
               </div>
               <Paper sx={{ width: "100%", overflow: "hidden" }}>
                 <TableContainer sx={{ maxHeight: 440 }} className="b-c-t c-w">
@@ -138,8 +126,7 @@ function Profile() {
                         <TableCell align="center">a</TableCell>
                         <TableCell align="center">a</TableCell>
                         <TableCell align="center">a</TableCell>
-                        <TableCell align="center">a</TableCell>
-                        <TableCell align="center">a</TableCell>
+                     
                         <TableCell align="center">
                         a
                         </TableCell>

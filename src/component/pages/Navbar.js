@@ -114,9 +114,11 @@ function Navbar() {
                 <CgProfile className="f-s-1_5" />
               </li>
               </NavLink>
+              <NavLink to="/cart">
               <li className="m-l-2 c-p   m-q-b-d-n ">
                 <AiOutlineShoppingCart className="f-s-1_5" />
               </li>
+              </NavLink>
               <li className="m-l-2 c-p   m-q-b-d-n ">95R</li>
               <li className="m-l-2 c-p   m-q-a-d-n ">
                 {" "}

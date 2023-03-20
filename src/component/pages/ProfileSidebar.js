@@ -31,13 +31,13 @@ function ProfileSidebar() {
           </NavLink>
         </div>
         <div className="account-setting  c-p f-w-600">
-          <NavLink to="/adb" className="sidebar pa-1 d-b">
+          <NavLink to="/purchasehistory" className="sidebar pa-1 d-b">
             <BiPurchaseTag className="account-setting-icon b-c-t" /> &nbsp;
             Purchase History
           </NavLink>
         </div>
         <div className="account-setting  c-p f-w-600">
-          <NavLink to="/adw" className="sidebar pa-1 d-b">
+          <NavLink to="/favourites" className="sidebar pa-1 d-b">
             <MdFavorite className="account-setting-icon b-c-t" /> &nbsp; My
             Favourites
           </NavLink>

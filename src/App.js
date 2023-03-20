@@ -9,11 +9,15 @@ import Footer from "./component/pages/Footer";
 import Product from "./component/pages/Product";
 import FAQ from "./component/pages/FAQ";
 import NFT from "./component/pages/NFT";
+import Cart from "./component/pages/Cart";
+
 import Profile from "./component/pages/Profile";
 
 import Contact from "./component/pages/Contact";
 import Login from "./component/pages/Login";
 import MyProfile from "./component/pages/MyProfile";
+import Purchasehistory from './component/pages/Purchasehistory';
+import Favourites from "./component/pages/Favourites";
 
 function App() {
   return (
@@ -28,7 +32,10 @@ function App() {
           <Route path="/my-profile" element={<MyProfile />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/nft" element={<NFT />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/purchasehistory" element={<Purchasehistory />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/favourites" element={<Favourites />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
