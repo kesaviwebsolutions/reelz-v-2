@@ -13,6 +13,7 @@ import Profile from "./component/pages/Profile";
 
 import Contact from "./component/pages/Contact";
 import Login from "./component/pages/Login";
+import MyProfile from "./component/pages/MyProfile";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/form" element={<Form1 />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/my-profile" element={<MyProfile />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/nft" element={<NFT />} />
           <Route path="/login" element={<Login />} />

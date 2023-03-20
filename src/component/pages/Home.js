@@ -2,7 +2,6 @@ import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import Sliderhome from "./Sliderhome";
 import Collector from "./Collector";
-
 import ProductSlider from "./ProductSlider";
 import CategoriesSlider from "./CategoriesSlider";
 import { Link } from "react-router-dom";

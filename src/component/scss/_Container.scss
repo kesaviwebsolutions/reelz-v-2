@@ -13,13 +13,19 @@
     --primary-color5: #fff;
     --product-color3: #b9b8bb;
     --primary-color11: #1f1f2c;
-    ;
+    --skin-color:#f5e6d5;
+    --red-clr:#ff4050;
 }
 
 .b-c-p-c-11 {
     background-color: var(--primary-color11) !important;
 }
-
+.red-clr{
+    color: var(--red-clr) !important;
+}
+.b-c-s-c{
+    background-color: var(--skin-color) !important;
+}
 .sc-product {
     background: var(--product-color4);
     border: 1.5px solid var(--primary-color4);
@@ -185,6 +191,7 @@ a.sidebar.active {
     color: #000 !important;
     fill: #000 !important;
     width: 100% !important;
+
     .account-setting-icon {
         fill: black !important;
     }
@@ -192,4 +199,40 @@ a.sidebar.active {
 
 input {
     background-color: var(--primary-color11) !important;
+}
+
+.num-100 {
+    color: var(--yellow) !important;
+}
+
+.bg-image {
+    background-image: url(../Image/bg-image.png);
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: right top;
+}
+
+.sparrow-1 {
+    position: absolute;
+    bottom: 15%;
+    left: 0%;
+    right: auto;
+    top: auto;
+}
+
+.sparrow-2 {
+    position: absolute;
+    right: 0;
+    top: 21%;
+}
+.current-bid{
+    position: absolute;
+    left: 0;
+    top: 40%;
+}
+.yellow-clr{
+    color: var(--yellow) !important;
+}
+.b-c-y-clr{
+    background-color: var(--yellow) !important;
 }
