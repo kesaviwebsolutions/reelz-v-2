@@ -9,7 +9,9 @@ import Page404 from "./component/pages/Page404";
 import Footer from "./component/pages/Footer";
 import Product from "./component/pages/Product";
 import FAQ from "./component/pages/FAQ";
+import NFT from './component/pages/NFT'
 import Contact from "./component/pages/Contact";
+import Login from "./component/pages/Login";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/form" element={<Form1 />} />
           <Route path="/product" element={<Product />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/nft" element={<NFT />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Page404 />} />
         </Routes>

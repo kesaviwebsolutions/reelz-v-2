@@ -5,9 +5,8 @@ import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Dropdown from "react-bootstrap/Dropdown";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
-import { CgProfile } from 'react-icons/cg';
-import { RxCross2 } from 'react-icons/rx';
-
+import { CgProfile } from "react-icons/cg";
+import { RxCross2 } from "react-icons/rx";
 
 import Modal from "react-bootstrap/Modal";
 import meta from "../Image/meta.png";
@@ -32,10 +31,10 @@ function Navbar() {
 
   useLayoutEffect(() => {
     const data = window.localStorage.getItem("theme");
-    if (data === "dark-theme") {
-      setTheme("dark-theme");
-    } else {
+    if (data === "light-theme") {
       setTheme("light-theme");
+    } else {
+      setTheme("dark-theme");
     }
   }, []);
 
@@ -66,22 +65,37 @@ function Navbar() {
                 />
               </li>
 
-              <NavLink className="nav" to="/">  <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Home</li></NavLink>
+              <NavLink className="nav" to="/">
+                {" "}
+                <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Home</li>
+              </NavLink>
 
-              <NavLink className="nav" to="/product">   <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Products</li></NavLink>
+              <NavLink className="nav" to="/product">
+                {" "}
+                <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Products</li>
+              </NavLink>
 
-              <NavLink className="nav" to="/faq">    <li className="m-r-2 c-p f-w-600   m-q-b-d-n">FAQ</li></NavLink>
+              <NavLink className="nav" to="/faq">
+                {" "}
+                <li className="m-r-2 c-p f-w-600   m-q-b-d-n">FAQ</li>
+              </NavLink>
 
-              <NavLink className="nav" to="/contact">     <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Contact</li></NavLink>
+              <NavLink className="nav" to="/contact">
+                {" "}
+                <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Contact</li>
+              </NavLink>
 
-              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">NFT's</li>
-              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Login</li>
+              <NavLink className="nav" to="/nft">
+                {" "}
+                <li className="m-r-2 c-p f-w-600   m-q-b-d-n">NFT's</li>
+              </NavLink>
+              <NavLink className="nav" to="/login">
+                <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Login</li>
+              </NavLink>
             </ul>
           </div>
           <div className=" c-p ">
             <ul className="l-s-t-n d-f a-i-c ">
-
-
               {/*   <li className="m-l-2 c-pq ">
             <span className="" onClick={() => toggleTheme()}>{theme === "dark-theme" ? "Light mode" : "Dark mode"}</span>
             </li> */}
@@ -95,8 +109,12 @@ function Navbar() {
                   Connect Wallet
                 </Button>
               </li>
-              <li className="m-l-2 c-p   m-q-b-d-n "><CgProfile className="f-s-1_5" /></li>
-              <li className="m-l-2 c-p   m-q-b-d-n "><AiOutlineShoppingCart className="f-s-1_5" /></li>
+              <li className="m-l-2 c-p   m-q-b-d-n ">
+                <CgProfile className="f-s-1_5" />
+              </li>
+              <li className="m-l-2 c-p   m-q-b-d-n ">
+                <AiOutlineShoppingCart className="f-s-1_5" />
+              </li>
               <li className="m-l-2 c-p   m-q-b-d-n ">95R</li>
               <li className="m-l-2 c-p   m-q-a-d-n ">
                 {" "}

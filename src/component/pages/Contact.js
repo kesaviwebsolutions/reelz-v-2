@@ -1,5 +1,6 @@
 import TextArea from "antd/es/input/TextArea";
 import React from "react";
+import { Form } from "react-bootstrap";
 import contactimage from "../Image/contact-image.png";
 
 function Contact() {
@@ -25,12 +26,18 @@ function Contact() {
                             <input type="text" className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10" placeholder="Your Email Address" />
                             </div>
                             <div className="m-b-1">
-                                <select>
-                                <option></option>
-                                </select>
+                            <Form.Select aria-label="Default select example" className="b-c-p-c-11 b-n">
+                           
+                            <option value="1">Select Subject</option>
+                            <option value="2">Select Subject</option>
+                            <option value="3">Select Subject</option>
+                          </Form.Select>
                             </div>
-                            <div className="m-b-1">
+                            <div className="m-b-2">
                             <TextArea type="text" className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10 c-w" placeholder="Message" />
+                        </div>
+                        <div className="">
+                        <button className="primary-btn w-100 ">Submit</button>
                         </div>
                         </div>
                     </div>

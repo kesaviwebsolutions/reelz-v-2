@@ -12,7 +12,7 @@
     --product-color2: #b9b8bb;
     --primary-color5: #fff;
     --product-color3: #b9b8bb;
-    --primary-color11: #28303f;
+    --primary-color11: #1f1f2c;;
 }
 
 .b-c-p-c-11 {
@@ -128,4 +128,8 @@ div#panel1a-header {
             fill: black !important;
         }
     }
+}
+
+input::placeholder ,textarea::placeholder{
+    color: white !important;
 }
