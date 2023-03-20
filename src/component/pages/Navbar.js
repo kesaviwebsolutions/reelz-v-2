@@ -14,7 +14,7 @@ import walletconnect from "../Svg/walletconnect.svg";
 import "animate.css";
 
 import logo from "../Image/logo.webp";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -109,9 +109,11 @@ function Navbar() {
                   Connect Wallet
                 </Button>
               </li>
+              <NavLink to="/profile">
               <li className="m-l-2 c-p   m-q-b-d-n ">
                 <CgProfile className="f-s-1_5" />
               </li>
+              </NavLink>
               <li className="m-l-2 c-p   m-q-b-d-n ">
                 <AiOutlineShoppingCart className="f-s-1_5" />
               </li>

@@ -15,6 +15,7 @@ import nftdemo from "../Image/nftdemo.jpg";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillHandbagFill } from "react-icons/bs";
 
+
 function LiveAutions() {
   return (
     <section className="tf-section tf-live-auction visible-sw">
@@ -22,7 +23,8 @@ function LiveAutions() {
         <div className="row">
           <div className="col-md-12 wow fadeInUp">
             <Swiper
-              modules={[Scrollbar, A11y]}
+            navigation={true} 
+              modules={[Navigation,Scrollbar, A11y]}
               spaceBetween={30}
               slidesPerView={5}
               breakpoints={{
@@ -46,11 +48,11 @@ function LiveAutions() {
                 <div className="slider-item">
                   <div className="sc-product style1">
                     <div className="top m-b-1">
-                      <Link to="/product-details" className="tag">
+                      <Link to="" className="tag">
                         Archetype #588
                       </Link>
                       <div className="wish-list">
-                        <Link to="#" className="heart-icon">
+                        <Link to="" className="heart-icon">
                           <AiFillHeart className="b-c-t" />
                         </Link>
                       </div>
@@ -62,7 +64,7 @@ function LiveAutions() {
                     </div>
                     <div className="bottom">
                       <div className="product-button">
-                        <Link to="/product-details" className="tf-button">
+                        <Link to="" className="tf-button">
                           {" "}
                           <button className="secondary-btn">
                             <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
@@ -78,11 +80,11 @@ function LiveAutions() {
                 <div className="slider-item">
                   <div className="sc-product style1">
                     <div className="top m-b-1">
-                      <Link to="/product-details" className="tag">
+                      <Link to="" className="tag">
                         Archetype #588
                       </Link>
                       <div className="wish-list">
-                        <Link to="#" className="heart-icon">
+                        <Link to="" className="heart-icon">
                           <AiFillHeart className="b-c-t" />
                         </Link>
                       </div>
@@ -94,7 +96,7 @@ function LiveAutions() {
                     </div>
                     <div className="bottom">
                       <div className="product-button">
-                        <Link to="/product-details" className="tf-button">
+                        <Link to="" className="tf-button">
                           {" "}
                           <button className="secondary-btn">
                             <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
@@ -110,11 +112,11 @@ function LiveAutions() {
                 <div className="slider-item">
                   <div className="sc-product style1">
                     <div className="top m-b-1">
-                      <Link to="/product-details" className="tag">
+                      <Link to="" className="tag">
                         Archetype #588
                       </Link>
                       <div className="wish-list">
-                        <Link to="#" className="heart-icon">
+                        <Link to="" className="heart-icon">
                           <AiFillHeart className="b-c-t" />
                         </Link>
                       </div>
@@ -126,7 +128,7 @@ function LiveAutions() {
                     </div>
                     <div className="bottom">
                       <div className="product-button">
-                        <Link to="/product-details" className="tf-button">
+                        <Link to="" className="tf-button">
                           {" "}
                           <button className="secondary-btn">
                             <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
@@ -142,11 +144,11 @@ function LiveAutions() {
                 <div className="slider-item">
                   <div className="sc-product style1">
                     <div className="top m-b-1">
-                      <Link to="/product-details" className="tag">
+                      <Link to="" className="tag">
                         Archetype #588
                       </Link>
                       <div className="wish-list">
-                        <Link to="#" className="heart-icon">
+                        <Link to="" className="heart-icon">
                           <AiFillHeart className="b-c-t" />
                         </Link>
                       </div>
@@ -158,7 +160,7 @@ function LiveAutions() {
                     </div>
                     <div className="bottom">
                       <div className="product-button">
-                        <Link to="/product-details" className="tf-button">
+                        <Link to="" className="tf-button">
                           {" "}
                           <button className="secondary-btn">
                             <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
@@ -174,11 +176,11 @@ function LiveAutions() {
                 <div className="slider-item">
                   <div className="sc-product style1">
                     <div className="top m-b-1">
-                      <Link to="/product-details" className="tag">
+                      <Link to="" className="tag">
                         Archetype #588
                       </Link>
                       <div className="wish-list">
-                        <Link to="#" className="heart-icon">
+                        <Link to="" className="heart-icon">
                           <AiFillHeart className="b-c-t" />
                         </Link>
                       </div>
@@ -190,7 +192,7 @@ function LiveAutions() {
                     </div>
                     <div className="bottom">
                       <div className="product-button">
-                        <Link to="/product-details" className="tf-button">
+                        <Link to="" className="tf-button">
                           {" "}
                           <button className="secondary-btn">
                             <BsFillHandbagFill className="b-c-t bag-icon" />{" "}

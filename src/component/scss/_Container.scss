@@ -12,7 +12,8 @@
     --product-color2: #b9b8bb;
     --primary-color5: #fff;
     --product-color3: #b9b8bb;
-    --primary-color11: #1f1f2c;;
+    --primary-color11: #1f1f2c;
+    ;
 }
 
 .b-c-p-c-11 {
@@ -27,22 +28,26 @@
 
     transition: all 0.3s ease;
 }
+
 .sc-product .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: -2px;
 }
+
 .sc-product .top .tag {
     font-family: "DM Sans";
     font-weight: 700;
     font-size: 20px;
 }
+
 a {
     text-decoration: none;
     color: var(--primary-color5);
     transition: all 0.3s ease;
 }
+
 .sc-product .top .wish-list {
     width: 40px;
     height: 40px;
@@ -60,19 +65,23 @@ a {
     font-size: 16px;
     color: var(--product-color3);
 }
+
 .sc-product .features {
     margin-bottom: 16px;
     position: relative;
     overflow: hidden;
 }
+
 .sc-product .features .product-media {
     border-radius: 15px;
     overflow: hidden;
 }
+
 .sc-product .features .product-media img {
     width: 100%;
     transition: all 0.3s ease;
 }
+
 .sc-product .features .featured-countdown {
     content: "";
     position: absolute;
@@ -89,6 +98,7 @@ a {
     backdrop-filter: blur(4px);
     border-radius: 100px;
 }
+
 .sc-product .bottom .product-button a {
     display: block;
     text-align: center;
@@ -101,35 +111,85 @@ a {
     background: transparent;
     border-color: var(--product-color6);
 }
+
 .tf-button span {
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
     position: relative;
 }
+
 .sc-product .bottom .product-button a span {
     font-size: 19px;
     vertical-align: middle;
     margin-right: 6px;
 }
+
 a.nav.active {
     color: var(--yellow) !important;
 }
+
 div#panel1a-header {
     background: var(--primary-color11) !important;
     color: white !important;
+
     .expand-icon {
         fill: white !important;
     }
+
     &:hover {
         background: var(--yellow) !important;
         color: black !important;
+
         .expand-icon {
             fill: black !important;
         }
     }
 }
 
-input::placeholder ,textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
     color: white !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: black !important;
+    background: var(--yellow) !important;
+    padding: 5px !important;
+    font-size: 0.5rem !important;
+    border-radius: 50%;
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+}
+
+.account-setting:hover {
+    background-color: var(--yellow) !important;
+    color: black !important;
+    fill: black !important;
+
+    .account-setting-icon {
+        fill: black !important;
+    }
+}
+
+a.sidebar.active {
+    background-color: var(--yellow) !important;
+
+    color: #000 !important;
+    fill: #000 !important;
+    width: 100% !important;
+    .account-setting-icon {
+        fill: black !important;
+    }
+}
+
+input {
+    background-color: var(--primary-color11) !important;
 }

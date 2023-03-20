@@ -14,7 +14,7 @@ function Login() {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </div>
-              <div className="t-a-c m-b-1">Or login with account</div>
+              <div className="t-a-c m-b-2">Or login with account</div>
               <div className="m-b-1">
                 <input
                   type="text"
@@ -29,7 +29,7 @@ function Login() {
                   placeholder="Password"
                 />
               </div>
-              <div className="m-b-1 d-f j-c-s-b">
+              <div className="m-b-2 d-f j-c-s-b">
                 <div className="">Remember for 30 days</div>
                 <div className="">Forgot Password?</div>
               </div>
