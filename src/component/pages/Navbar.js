@@ -61,7 +61,7 @@ function Navbar() {
                 <img
                   src={logo}
                   alt=""
-                  className="logo animate__animated animate__rubberBand w-7"
+                  className="logo animate__animated animate__rubberBand w-5"
                 />
               </li>
 
@@ -139,7 +139,7 @@ function Navbar() {
             {" "}
             <div className="image-dog1">
               <a href="/" target="_blank">
-                <img src={logo} alt="" className="w-7" />
+                <img src={logo} alt="" className="w-5" />
               </a>
             </div>
           </Offcanvas.Title>
