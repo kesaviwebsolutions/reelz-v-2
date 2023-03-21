@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillInstagram } from 'react-icons/ai';
 import { BsDiscord, BsTwitter } from 'react-icons/bs';
-import logo from "../Image/logo.webp";
+import logo from "../Image/logo1.jpg";
 import { FaTelegramPlane } from "react-icons/fa";
 
 function Footer() {
@@ -10,7 +10,7 @@ function Footer() {
 <div className='container-kws'>
 <div className='section'>
 <div className='t-a-c'>
-<img src={logo} className="w-7"/>
+<img src={logo} className="w-5 m-b-2"/>
 <div className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</div>
 <div className='m-a'>
 <ul className='l-s-t-n d-i-f a-i-c p-y-1'>

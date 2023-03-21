@@ -13,7 +13,7 @@ import meta from "../Image/meta.png";
 import walletconnect from "../Svg/walletconnect.svg";
 import "animate.css";
 
-import logo from "../Image/logo.webp";
+import logo from "../Image/logo1.jpg";
 import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -139,7 +139,7 @@ function Navbar() {
             {" "}
             <div className="image-dog1">
               <a href="/" target="_blank">
-                <img src={logo} alt="" className="" />
+                <img src={logo} alt="" className="w-7" />
               </a>
             </div>
           </Offcanvas.Title>
