@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import bgvideo from "../Video/bg.mp4";
 import Reelz from "../Image/Reelz-62.gif";
 
 // Import Swiper styles
@@ -15,10 +16,15 @@ export default function App() {
       <Swiper className="mySwiper">
         <SwiperSlide>
           <div className="row">
-            <div className="col-12 col-sm-12 col-md-6">
+            <div className="col-12 col-sm-12 col-md-6 ">
+              <div className="bgvideo ps-r">
+                <video autoPlay muted loop className="bg-vid w-100" >
+                  <source src={bgvideo} type="video/mp4" />
+                </video>
+              </div>
               <div className="bg-image m-t-5">
                 <div className="f-s-2 f-w-600">
-                  Welcome to <br/>{" "}
+                  Welcome to <br />{" "}
                   <span className="f-s-4">R33LZ R33WARDZ Marketplace </span>
                 </div>
 
