@@ -3,10 +3,12 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import bgvideo from "../Video/bg.mp4";
 import Reelz from "../Image/Reelz-62.gif";
+import bgmobile from "../Video/bg-mobile.mp4";
 
 // Import Swiper styles
 import "swiper/css";
 import sparrow from "../Image/sparrow.png";
+import { Grid } from "@mui/material";
 
 // import "./styles.css";
 
@@ -15,14 +17,19 @@ export default function App() {
     <div>
       <Swiper className="mySwiper">
         <SwiperSlide>
-          <div className="row">
-            <div className="col-12 col-sm-12 col-md-6 ">
-              <div className="bgvideo ps-r">
+          <Grid container>
+            <Grid item xs={12} sm={12} md={12} lg={6}>
+              <div className="bgvideo ps-r m-q-b-d-n">
                 <video autoPlay muted loop className="bg-vid w-100" >
                   <source src={bgvideo} type="video/mp4" />
                 </video>
               </div>
-              <div className="bg-image m-t-5">
+              <div className="bgvideo ps-r m-q-a-d-n">
+              <video autoPlay muted loop className="bg-vid w-100" >
+                <source src={bgmobile} type="video/mp4" />
+              </video>
+            </div>
+              <div className="bg-image m-t-5 ">
                 <div className="f-s-2 f-w-600">
                   Welcome to <br />{" "}
                   <span className="f-s-4">R33LZ R33WARDZ Marketplace </span>
@@ -39,8 +46,8 @@ export default function App() {
                   <button className="primary-btn m-t-3">Explore Now</button>
                 </div>
               </div>
-            </div>
-            <div className="col-12 col-sm-12 col-md-6 m-q-b-d-n ps-r">
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={6} className="m-q-b-d-n ps-r">
               <div className="m-a t-a-c">
                 <span className=" b-r-15 b-1 d-i-b pa-1">
                   <img
@@ -63,8 +70,8 @@ export default function App() {
               <div className="">
                 <img src={sparrow} className="sparrow-2 w-3 h-3" />
               </div>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </SwiperSlide>
 
         <SwiperSlide>
