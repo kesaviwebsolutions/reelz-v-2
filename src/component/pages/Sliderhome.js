@@ -17,18 +17,19 @@ export default function App() {
     <div>
       <Swiper className="mySwiper">
         <SwiperSlide>
+        <div className="bgvideo ps-r m-q-b-d-n">
+        <video autoPlay muted loop className="bg-vid w-100">
+          <source src={bgvideo} type="video/mp4" />
+        </video>
+      </div>
           <Grid container>
             <Grid item xs={12} sm={12} md={12} lg={6}>
-              <div className="bgvideo ps-r m-q-b-d-n">
-                <video autoPlay muted loop className="bg-vid w-100" >
-                  <source src={bgvideo} type="video/mp4" />
+             
+              <div className="bgvideo ps-r m-q-a-d-n">
+                <video autoPlay muted loop className="bg-vid w-100">
+                  <source src={bgmobile} type="video/mp4" />
                 </video>
               </div>
-              <div className="bgvideo ps-r m-q-a-d-n">
-              <video autoPlay muted loop className="bg-vid w-100" >
-                <source src={bgmobile} type="video/mp4" />
-              </video>
-            </div>
               <div className="bg-image m-t-5 ">
                 <div className="f-s-2 f-w-600">
                   Welcome to <br />{" "}
@@ -47,7 +48,14 @@ export default function App() {
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={6} className="m-q-b-d-n ps-r">
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={6}
+              className="m-q-b-d-n ps-r"
+            >
               <div className="m-a t-a-c">
                 <span className=" b-r-15 b-1 d-i-b pa-1">
                   <img
