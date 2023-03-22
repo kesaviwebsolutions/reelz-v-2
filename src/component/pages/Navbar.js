@@ -147,29 +147,14 @@ function Navbar() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className="l-s-t-n">
-            <li className="m-r-1 m-t-1 c-p">dummy</li>
-            <li className="m-r-1 m-t-1 c-p">dummy</li>
-            <li className="m-r-1 m-t-1 c-p">dummy</li>
-            <li className="m-r-1 m-t-1 c-p">
-              <Dropdown>
-                <Dropdown.Toggle
-                  variant="success"
-                  id="dropdown-basic"
-                  className="b-c-t c-i b-n"
-                >
-                  Dropdown Button
-                </Dropdown.Toggle>
-                <Dropdown.Menu className="pa-1">
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </li>
+         <NavLink className="nav" to="/">   <li className="m-r-1 m-t-1 c-p">HOME</li></NavLink>
+         <NavLink className="nav" to="/product">    <li className="m-r-1 m-t-1 c-p">PRODUCTS</li></NavLink>
+         <NavLink className="nav" to="/faq">     <li className="m-r-1 m-t-1 c-p">FAQ</li></NavLink>
+         <NavLink className="nav" to="/contact">     <li className="m-r-1 m-t-1 c-p">CONTACT</li></NavLink>
+         <NavLink className="nav" to="/nft">    <li className="m-r-1 m-t-1 c-p">NFT'S</li></NavLink>
+         <NavLink className="nav" to="/login">    <li className="m-r-1 m-t-1 c-p">LOGIN</li></NavLink>
+         <NavLink className="nav" to="/profile">   <li className="m-r-1 m-t-1 c-p">PROFILE</li></NavLink>
+         <NavLink className="nav" to="/cart">    <li className="m-r-1 m-t-1 c-p">CART</li></NavLink>
           </ul>
         </Offcanvas.Body>
       </Offcanvas>

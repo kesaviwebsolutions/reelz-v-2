@@ -17,14 +17,13 @@ export default function App() {
     <div>
       <Swiper className="mySwiper">
         <SwiperSlide>
-        <div className="bgvideo ps-r m-q-b-d-n">
-        <video autoPlay muted loop className="bg-vid w-100">
-          <source src={bgvideo} type="video/mp4" />
-        </video>
-      </div>
+          <div className="bgvideo ps-r m-q-b-d-n">
+            <video autoPlay muted loop className="bg-vid w-100">
+              <source src={bgvideo} type="video/mp4" />
+            </video>
+          </div>
           <Grid container>
             <Grid item xs={12} sm={12} md={12} lg={6}>
-             
               <div className="bgvideo ps-r m-q-a-d-n">
                 <video autoPlay muted loop className="bg-vid w-100">
                   <source src={bgmobile} type="video/mp4" />
