@@ -15,8 +15,9 @@ import "animate.css";
 
 import logo from "../Image/logo1.jpg";
 import { Link, NavLink } from "react-router-dom";
+import { useStoreState } from "easy-peasy";
 
-function Navbar() {
+function Navbar({ Metamask, Dissconnect, WalletC }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -50,6 +51,14 @@ function Navbar() {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
+
+  const wallets = useStoreState((state) => state.wallet_address);
+  
+  const manageAddress = (address)=>{
+    const first = address.slice(0,4);
+    const seconds = address.slice(38)
+    return first + "..." + seconds
+  }
 
   return (
     <>
@@ -103,21 +112,27 @@ function Navbar() {
                 {" "}
                 <Button
                   variant="primary"
-                  onClick={handleShow2}
+                  onClick={() => {
+                    if (wallets) {
+                      Dissconnect();
+                      return;
+                    }
+                    handleShow2();
+                  }}
                   className=" pa-0_5 c-i b-c-i b-c-p-c-11 b-n f-w-600"
                 >
-                  Connect Wallet
+                  {wallets ? manageAddress(wallets) : "Connect Wallet"}
                 </Button>
               </li>
               <NavLink to="/profile">
-              <li className="m-l-2 c-p   m-q-b-d-n ">
-                <CgProfile className="f-s-1_5" />
-              </li>
+                <li className="m-l-2 c-p   m-q-b-d-n ">
+                  <CgProfile className="f-s-1_5" />
+                </li>
               </NavLink>
               <NavLink to="/cart">
-              <li className="m-l-2 c-p   m-q-b-d-n ">
-                <AiOutlineShoppingCart className="f-s-1_5" />
-              </li>
+                <li className="m-l-2 c-p   m-q-b-d-n ">
+                  <AiOutlineShoppingCart className="f-s-1_5" />
+                </li>
               </NavLink>
               <li className="m-l-2 c-p   m-q-b-d-n ">95R</li>
               <li className="m-l-2 c-p   m-q-a-d-n ">
@@ -147,14 +162,38 @@ function Navbar() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className="l-s-t-n">
-         <NavLink className="nav" to="/">   <li className="m-r-1 m-t-1 c-p">HOME</li></NavLink>
-         <NavLink className="nav" to="/product">    <li className="m-r-1 m-t-1 c-p">PRODUCTS</li></NavLink>
-         <NavLink className="nav" to="/faq">     <li className="m-r-1 m-t-1 c-p">FAQ</li></NavLink>
-         <NavLink className="nav" to="/contact">     <li className="m-r-1 m-t-1 c-p">CONTACT</li></NavLink>
-         <NavLink className="nav" to="/nft">    <li className="m-r-1 m-t-1 c-p">NFT'S</li></NavLink>
-         <NavLink className="nav" to="/login">    <li className="m-r-1 m-t-1 c-p">LOGIN</li></NavLink>
-         <NavLink className="nav" to="/profile">   <li className="m-r-1 m-t-1 c-p">PROFILE</li></NavLink>
-         <NavLink className="nav" to="/cart">    <li className="m-r-1 m-t-1 c-p">CART</li></NavLink>
+            <NavLink className="nav" to="/">
+              {" "}
+              <li className="m-r-1 m-t-1 c-p">HOME</li>
+            </NavLink>
+            <NavLink className="nav" to="/product">
+              {" "}
+              <li className="m-r-1 m-t-1 c-p">PRODUCTS</li>
+            </NavLink>
+            <NavLink className="nav" to="/faq">
+              {" "}
+              <li className="m-r-1 m-t-1 c-p">FAQ</li>
+            </NavLink>
+            <NavLink className="nav" to="/contact">
+              {" "}
+              <li className="m-r-1 m-t-1 c-p">CONTACT</li>
+            </NavLink>
+            <NavLink className="nav" to="/nft">
+              {" "}
+              <li className="m-r-1 m-t-1 c-p">NFT'S</li>
+            </NavLink>
+            <NavLink className="nav" to="/login">
+              {" "}
+              <li className="m-r-1 m-t-1 c-p">LOGIN</li>
+            </NavLink>
+            <NavLink className="nav" to="/profile">
+              {" "}
+              <li className="m-r-1 m-t-1 c-p">PROFILE</li>
+            </NavLink>
+            <NavLink className="nav" to="/cart">
+              {" "}
+              <li className="m-r-1 m-t-1 c-p">CART</li>
+            </NavLink>
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
@@ -170,8 +209,24 @@ function Navbar() {
           <Modal.Body>
             {" "}
             <div className="walletconnect d-f a-i-c j-c-s-e m-y-2">
-              <img src={meta} alt="" className="w-7" />
-              <img src={walletconnect} alt="" className="w-5" />
+              <img
+                src={meta}
+                alt=""
+                className="w-7"
+                onClick={() => {
+                  Metamask();
+                  handleClose2();
+                }}
+              />
+              <img
+                src={walletconnect}
+                alt=""
+                className="w-5"
+                onClick={() => {
+                  WalletC();
+                  handleClose2();
+                }}
+              />
             </div>
           </Modal.Body>
         </div>
