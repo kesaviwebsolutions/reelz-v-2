@@ -14,7 +14,11 @@ import { Link } from "react-router-dom";
 import nftdemo from "../Image/nftdemo.jpg";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillHandbagFill } from "react-icons/bs";
-
+import bgvido from "../Video/g.mp4";
+import bgvido2 from "../Video/gift-card-50.mp4";
+import bgvido3 from "../Video/gift-card-100.mp4";
+import bgvido4 from "../Video/$200 Gift Card.mp4";
+import bgvido5 from "../Video/$500 Amazon Gift Card.mp4";
 
 function LiveAutions() {
   return (
@@ -23,8 +27,8 @@ function LiveAutions() {
         <div className="row">
           <div className="col-md-12 wow fadeInUp">
             <Swiper
-            navigation={true} 
-              modules={[Navigation,Scrollbar, A11y]}
+              navigation={true}
+              modules={[Navigation, Scrollbar, A11y]}
               spaceBetween={30}
               slidesPerView={5}
               breakpoints={{
@@ -59,7 +63,10 @@ function LiveAutions() {
                     </div>
                     <div className="features">
                       <div className="product-media">
-                        <img src={nftdemo} alt="images" />
+                        {/*    <img src={nftdemo} alt="images" /> */}
+                        <video autoPlay muted loop className="w-100">
+                          <source src={bgvido} type="video/mp4" />
+                        </video>
                       </div>
                     </div>
                     <div className="bottom">
@@ -91,7 +98,9 @@ function LiveAutions() {
                     </div>
                     <div className="features">
                       <div className="product-media">
-                        <img src={nftdemo} alt="images" />
+                      <video autoPlay muted loop className="w-100">
+                      <source src={bgvido2} type="video/mp4" />
+                    </video>
                       </div>
                     </div>
                     <div className="bottom">
@@ -123,7 +132,9 @@ function LiveAutions() {
                     </div>
                     <div className="features">
                       <div className="product-media">
-                        <img src={nftdemo} alt="images" />
+                      <video autoPlay muted loop className="w-100">
+                      <source src={bgvido3} type="video/mp4" />
+                    </video>
                       </div>
                     </div>
                     <div className="bottom">
@@ -155,7 +166,9 @@ function LiveAutions() {
                     </div>
                     <div className="features">
                       <div className="product-media">
-                        <img src={nftdemo} alt="images" />
+                      <video autoPlay muted loop className="w-100">
+                      <source src={bgvido4} type="video/mp4" />
+                    </video>
                       </div>
                     </div>
                     <div className="bottom">
@@ -187,7 +200,9 @@ function LiveAutions() {
                     </div>
                     <div className="features">
                       <div className="product-media">
-                        <img src={nftdemo} alt="images" />
+                      <video autoPlay muted loop className="w-100">
+                      <source src={bgvido5} type="video/mp4" />
+                    </video>
                       </div>
                     </div>
                     <div className="bottom">

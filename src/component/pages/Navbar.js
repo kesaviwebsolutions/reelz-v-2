@@ -164,35 +164,35 @@ function Navbar({ Metamask, Dissconnect, WalletC }) {
           <ul className="l-s-t-n">
             <NavLink className="nav" to="/">
               {" "}
-              <li className="m-r-1 m-t-1 c-p">HOME</li>
+              <li className="m-r-1 m-t-1 c-p" onClick={handleClose}>HOME</li>
             </NavLink>
             <NavLink className="nav" to="/product">
               {" "}
-              <li className="m-r-1 m-t-1 c-p">PRODUCTS</li>
+              <li className="m-r-1 m-t-1 c-p" onClick={handleClose}>PRODUCTS</li>
             </NavLink>
             <NavLink className="nav" to="/faq">
               {" "}
-              <li className="m-r-1 m-t-1 c-p">FAQ</li>
+              <li className="m-r-1 m-t-1 c-p" onClick={handleClose}>FAQ</li>
             </NavLink>
             <NavLink className="nav" to="/contact">
               {" "}
-              <li className="m-r-1 m-t-1 c-p">CONTACT</li>
+              <li className="m-r-1 m-t-1 c-p" onClick={handleClose}>CONTACT</li>
             </NavLink>
             <NavLink className="nav" to="/nft">
               {" "}
-              <li className="m-r-1 m-t-1 c-p">NFT'S</li>
+              <li className="m-r-1 m-t-1 c-p" onClick={handleClose}>NFT'S</li>
             </NavLink>
             <NavLink className="nav" to="/login">
               {" "}
-              <li className="m-r-1 m-t-1 c-p">LOGIN</li>
+              <li className="m-r-1 m-t-1 c-p" onClick={handleClose}>LOGIN</li>
             </NavLink>
             <NavLink className="nav" to="/profile">
               {" "}
-              <li className="m-r-1 m-t-1 c-p">PROFILE</li>
+              <li className="m-r-1 m-t-1 c-p" onClick={handleClose}>PROFILE</li>
             </NavLink>
             <NavLink className="nav" to="/cart">
               {" "}
-              <li className="m-r-1 m-t-1 c-p">CART</li>
+              <li className="m-r-1 m-t-1 c-p" onClick={handleClose}>CART</li>
             </NavLink>
           </ul>
         </Offcanvas.Body>
