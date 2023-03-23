@@ -1,4 +1,5 @@
 import React from "react";
+import Collector from "./Collector";
 
 function NFT() {
   return (
@@ -11,6 +12,7 @@ function NFT() {
           </div>
         </div>
         <div className="section">
+        <Collector />
           <div className="p-y-7 t-a-c">NO DATA TO SHOW....</div>
         </div>
       </div>
