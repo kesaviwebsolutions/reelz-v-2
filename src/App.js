@@ -20,6 +20,7 @@ import Purchasehistory from './component/pages/Purchasehistory';
 import Favourites from "./component/pages/Favourites";
 import { useEffect, useState } from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
+import ItemDetail from "./component/pages/ItemDetail";
 
 function App() {
 
@@ -106,6 +107,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/favourites" element={<Favourites />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/item-detail" element={<ItemDetail />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />

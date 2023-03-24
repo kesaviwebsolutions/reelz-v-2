@@ -250,3 +250,7 @@ th,td,tr,tbody{
     top: 0;
     left: 0;
 }
+.history{
+    max-height: 15rem !important;
+    overflow: auto !important;
+}
