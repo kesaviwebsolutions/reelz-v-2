@@ -6,6 +6,7 @@ import ItemDetailTab from "./ItemDetailTab";
 import detailowner from "../Image/detailowner.png";
 import ItemDetailTable from "./ItemDetailTable";
 import Collector from "./Collector";
+import Modal from "react-bootstrap/Modal";
 import { useStoreState } from "easy-peasy";
 import {
   get_Marketplace_contract,
@@ -15,6 +16,7 @@ import {
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import { RxCross2 } from "react-icons/rx";
 
 const notify = (msg) => toast(msg);
 const warning = (msg) => toast.error(msg);
@@ -40,6 +42,11 @@ function ItemDetail() {
   const [quantityTopuchase, setQuantityToPuchase] = useState();
   const [priceOfOffer, setPriceOfOffer] = useState();
   const [offers, setOffers] = useState([]);
+
+  const [show2, setShow2] = useState(false);
+
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
 
   const addslice = (add) => {
     const first = add.slice(0, 7);
@@ -211,7 +218,7 @@ function ItemDetail() {
                       >
                         BUY
                       </button>}
-                     { owner == wallet_address ? ' ' : <button className="secondary-btn ">MAKE OFFER</button>}
+                     { owner == wallet_address ? ' ' : <button className="secondary-btn " onClick={handleShow2}>MAKE OFFER</button>}
                     </div>
                   </div>
                 </div>
@@ -233,6 +240,59 @@ function ItemDetail() {
           <Toaster />
         </div>
       </div>
+      <Modal show={show2} onHide={handleClose2} className="">
+        <div className="">
+          <Modal.Header>
+            <Modal.Title className="t-a-c m-a c-i">
+            <div className="f-s-2 f-w-600">Place A Bid</div>
+            </Modal.Title>
+            <RxCross2 className="c-p" onClick={handleClose2} />
+          </Modal.Header>
+          <Modal.Body>
+            {" "}
+           <div className="t-a-c">
+
+            <div className="m-b-1">You must bid a least 4.89 ETH</div>
+           <div className="m-b-1">
+           <input
+           type="text"
+           className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
+           placeholder="00.00 ETH"
+         />
+           </div>
+           <div className="m-b-1">
+           <input
+           type="text"
+           className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
+           placeholder="Quantity"
+         />
+           </div>
+           <div className="m-b-1">
+           <input
+           type="datetime-local"
+           className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
+           placeholder="Quantity"
+         />
+           </div>
+           <div className="d-f j-c-s-b a-i-c m-b-1">
+           <div className="">You must bid at least:</div>
+           <div className="">4.89 ETH</div>
+           </div>
+           <div className="d-f j-c-s-b a-i-c m-b-1">
+           <div className="">Service free:</div>
+           <div className="">0,89 ETH</div>
+           </div>
+           <div className="d-f j-c-s-b a-i-c m-b-1">
+           <div className="">Total bid amount:</div>
+           <div className="">4 ETH</div>
+           </div>
+           <div className="primary-btn m-b-1">
+           Place a bid
+           </div>
+            </div>
+          </Modal.Body>
+        </div>
+      </Modal>
     </div>
   );
 }

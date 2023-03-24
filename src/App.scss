@@ -3,3 +3,7 @@
 input{
     background-color: transparent !important;
 }
+input:focus{
+    border: none !important;
+    outline: none !important;
+}

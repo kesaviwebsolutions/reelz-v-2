@@ -58,7 +58,12 @@ const rows = [
   createData("Brazil", "BR", 210147125, 8515767),
 ];
 
-export default function StickyHeadTable({ offers, accept_Offer, owner, wallet_address }) {
+export default function StickyHeadTable({
+  offers,
+  accept_Offer,
+  owner,
+  wallet_address,
+}) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -92,45 +97,57 @@ export default function StickyHeadTable({ offers, accept_Offer, owner, wallet_ad
   };
 
   return (
-    <Paper sx={{ width: "100%", overflow: "hidden" }}>
-      <TableContainer sx={{ maxHeight: 440 }}>
-        <Table stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth }}
-                >
-                  {column.label}
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {offers.map((row) => {
-              return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                  <TableCell>{row.pricePerNFT / 10 ** 18} ETH</TableCell>
-                  <TableCell>{addslice(row.offerCreator)}</TableCell>
-                  <TableCell>
-                    {offer_expire(Number(row.offerExpireTime))}
+    <div>
+      <Paper sx={{ width: "100%", overflow: "hidden" }}>
+        <TableContainer sx={{ maxHeight: 440 }}>
+          <Table stickyHeader aria-label="sticky table">
+            <TableHead>
+              <TableRow className="f-w-600">
+                {columns.map((column) => (
+                  <TableCell
+                    key={column.id}
+                    align="center"
+                    style={{ minWidth: column.minWidth }}
+                    className="f-w-600"
+                  >
+                    {column.label}
                   </TableCell>
-                  <TableCell>
-                    <button
-                      onClick={() => accept_Offer(row.offerId)}
-                      className="secondary-btn m-t-1"
-                    >
-                      Accept
-                    </button>
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </Paper>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {offers.map((row) => {
+                return (
+                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                    <TableCell align="center">
+                      {row.pricePerNFT / 10 ** 18} ETH
+                    </TableCell>
+                    <TableCell align="center">
+                      {addslice(row.offerCreator)}
+                    </TableCell>
+                    <TableCell align="center">
+                      {offer_expire(Number(row.offerExpireTime))}
+                    </TableCell>
+                    <TableCell align="center">
+                      <button
+                        onClick={() => accept_Offer(row.offerId)}
+                        className="secondary-btn m-t-1"
+                      >
+                        Accept
+                      </button>
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Paper>
+      {offers.length > 0 ? (
+        ""
+      ) : (
+        <div className="p-y-5 t-a-c b-c-t">NO DATA TO SHOW</div>
+      )}
+    </div>
   );
 }
