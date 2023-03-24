@@ -8,10 +8,10 @@ function Product() {
   return (
     <>
       <div className='container-kws'>
-        <div className='section'>
-          <div className='f-s-2 f-w-600'>Product</div>
-        </div>
-        <div className='section'>
+        <div className='section '>
+          <div className='f-s-2 f-w-600 m-b-2'>Product</div>
+       
+        <div className=''>
           <div className='row'>
             <div className='col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1'>
               <div className="slider-item">
@@ -154,6 +154,7 @@ function Product() {
       </div>
     </div>
           </div>
+        </div>
         </div>
       </div>
     </>
