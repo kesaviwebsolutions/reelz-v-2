@@ -12,6 +12,7 @@ import {
   get_Marketplace_contract,
   get_NFT_contract_1155,
   get_NFT_contract_721,
+  towie,
 } from "../../Contracts/Web3";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -141,7 +142,7 @@ function ItemDetail() {
   const make_Offer = async () => {
     try {
       const data = await marketplaceContract.methods
-        .makeOffer(listingID, quantity, priceOfOffer, offerExpireTime)
+        .makeOffer(listingID, quantityTopuchase, priceOfOffer, offerExpireTime)
         .send({ from: wallet_address });
       if (data.status) {
         notify("Success");
@@ -153,7 +154,8 @@ function ItemDetail() {
 
   const accept_Offer = async (id) => {
     try {
-      const data = await marketplaceContract.methods.acceptOffer(id)
+      const data = await marketplaceContract.methods
+        .acceptOffer(id)
         .send({ from: wallet_address });
       if (data.status) {
         notify("Success");
@@ -163,7 +165,23 @@ function ItemDetail() {
     }
   };
 
-  console.log(owner, )
+  const handletime = (value) => {
+    const time = Number(new Date(value).getTime() / 1000).toFixed(0);
+    setOfferExpireTime(time);
+  };
+  const handleamount = async(value) => {
+    const a = await towie(value)
+    setPriceOfOffer(a);
+  };
+  const handlequtantity = (value) => {
+    if (Number(value) > Number(quantity)) {
+      warning(`Qutantity should be less or equal to ${quantity}`);
+      return;
+    }
+    setQuantityToPuchase(value);
+  };
+
+  console.log(owner);
   return (
     <div>
       <div className="container-kws">
@@ -203,22 +221,35 @@ function ItemDetail() {
                       <div className="">{price} ETH</div>
                     </div>
                     <div className="">
-                    {owner == wallet_address ?  " " :  <button
-                        className="secondary-btn m-b-1 "
-                        onClick={() => {
-                          if (!isListed) {
-                            return;
-                          }
-                          if (standard) {
-                            buy_NFT_721();
-                          } else {
-                            buy_NFT_1155();
-                          }
-                        }}
-                      >
-                        BUY
-                      </button>}
-                     { owner == wallet_address ? ' ' : <button className="secondary-btn " onClick={handleShow2}>MAKE OFFER</button>}
+                      {owner == wallet_address ? (
+                        " "
+                      ) : (
+                        <button
+                          className="secondary-btn m-b-1 "
+                          onClick={() => {
+                            if (!isListed) {
+                              return;
+                            }
+                            if (standard) {
+                              buy_NFT_721();
+                            } else {
+                              buy_NFT_1155();
+                            }
+                          }}
+                        >
+                          BUY
+                        </button>
+                      )}
+                      {owner == wallet_address ? (
+                        " "
+                      ) : (
+                        <button
+                          className="secondary-btn "
+                          onClick={handleShow2}
+                        >
+                          MAKE OFFER
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -229,7 +260,12 @@ function ItemDetail() {
         <div className="section">
           <div className="f-s-2 f-w-600 m-b-2">Offers</div>
           <div className="">
-            <ItemDetailTable offers={offers} accept_Offer={accept_Offer} owner={owner} wallet_address={wallet_address}/>
+            <ItemDetailTable
+              offers={offers}
+              accept_Offer={accept_Offer}
+              owner={owner}
+              wallet_address={wallet_address}
+            />
           </div>
         </div>
         <div className="section">
@@ -244,51 +280,51 @@ function ItemDetail() {
         <div className="">
           <Modal.Header>
             <Modal.Title className="t-a-c m-a c-i">
-            <div className="f-s-2 f-w-600">Place A Bid</div>
+              <div className="f-s-2 f-w-600">Place A Bid</div>
             </Modal.Title>
             <RxCross2 className="c-p" onClick={handleClose2} />
           </Modal.Header>
           <Modal.Body>
             {" "}
-           <div className="t-a-c">
-
-            <div className="m-b-1">You must bid a least 4.89 ETH</div>
-           <div className="m-b-1">
-           <input
-           type="text"
-           className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
-           placeholder="00.00 ETH"
-         />
-           </div>
-           <div className="m-b-1">
-           <input
-           type="text"
-           className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
-           placeholder="Quantity"
-         />
-           </div>
-           <div className="m-b-1">
-           <input
-           type="datetime-local"
-           className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
-           placeholder="Quantity"
-         />
-           </div>
-           <div className="d-f j-c-s-b a-i-c m-b-1">
-           <div className="">You must bid at least:</div>
-           <div className="">4.89 ETH</div>
-           </div>
-           <div className="d-f j-c-s-b a-i-c m-b-1">
-           <div className="">Service free:</div>
-           <div className="">0,89 ETH</div>
-           </div>
-           <div className="d-f j-c-s-b a-i-c m-b-1">
-           <div className="">Total bid amount:</div>
-           <div className="">4 ETH</div>
-           </div>
-           <div className="primary-btn m-b-1">
-           Place a bid
-           </div>
+            <div className="t-a-c">
+              <div className="m-b-1">You must bid a least 4.89 ETH</div>
+              <div className="m-b-1">
+                <input
+                  type="text"
+                  onChange={(e)=>handleamount(e.target.value)}
+                  className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
+                  placeholder="00.00 ETH"
+                />
+              </div>
+              <div className="m-b-1">
+                <input
+                  type="text"
+                  onChange={(e)=>handlequtantity(e.target.value)}
+                  className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
+                  placeholder="Quantity"
+                />
+              </div>
+              <div className="m-b-1">
+                <input
+                  type="datetime-local"
+                  onChange={(e)=>handletime(e.target.value)}
+                  className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
+                  placeholder="Quantity"
+                />
+              </div>
+              <div className="d-f j-c-s-b a-i-c m-b-1">
+                <div className="">Quantity on sale</div>
+                <div className="">{quantity}</div>
+              </div>
+              {/* <div className="d-f j-c-s-b a-i-c m-b-1">
+                <div className="">Service free:</div>
+                <div className="">0,89 ETH</div>
+              </div>
+              <div className="d-f j-c-s-b a-i-c m-b-1">
+                <div className="">Total bid amount:</div>
+                <div className="">4 ETH</div> */}
+              {/* </div> */}
+              <div className="primary-btn m-b-1" onClick={()=>make_Offer()}>Place a bid</div>
             </div>
           </Modal.Body>
         </div>
