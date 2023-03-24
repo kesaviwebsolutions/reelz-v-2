@@ -15,7 +15,7 @@ function Collector() {
           <div className="slider-item">
             <div className="sc-product style1">
               <div className="top">
-                <Link to="/product-details" className="tag">
+                <Link to="/item-detail" className="tag">
                   R33LZ Blur #1
                 </Link>
                 <div className="wish-list">
@@ -52,7 +52,7 @@ function Collector() {
                     </div>
                   </div>
                   <div className="product-button">
-                    <Link to="/product-details" className="tf-button">
+                    <Link to="/item-detail" className="tf-button">
                       {" "}
                       <button className="secondary-btn">Purchase</button>
                     </Link>
@@ -66,7 +66,7 @@ function Collector() {
           <div className="slider-item">
             <div className="sc-product style1">
               <div className="top">
-                <Link to="/product-details" className="tag">
+                <Link to="/item-detail" className="tag">
                   R33LZ Blur #1
                 </Link>
                 <div className="wish-list">
@@ -103,7 +103,7 @@ function Collector() {
                     </div>
                   </div>
                   <div className="product-button">
-                    <Link to="/product-details" className="tf-button">
+                    <Link to="/item-detail" className="tf-button">
                       {" "}
                       <button className="secondary-btn">Purchase</button>
                     </Link>
@@ -117,7 +117,7 @@ function Collector() {
           <div className="slider-item">
             <div className="sc-product style1">
               <div className="top">
-                <Link to="/product-details" className="tag">
+                <Link to="/item-detail" className="tag">
                   R33LZ Blur #1
                 </Link>
                 <div className="wish-list">
@@ -154,7 +154,7 @@ function Collector() {
                     </div>
                   </div>
                   <div className="product-button">
-                    <Link to="/product-details" className="tf-button">
+                    <Link to="/item-detail" className="tf-button">
                       {" "}
                       <button className="secondary-btn">Purchase</button>
                     </Link>
@@ -168,7 +168,7 @@ function Collector() {
           <div className="slider-item">
             <div className="sc-product style1">
               <div className="top">
-                <Link to="/product-details" className="tag">
+                <Link to="/item-detail" className="tag">
                   R33LZ Blur #1
                 </Link>
                 <div className="wish-list">
@@ -205,7 +205,7 @@ function Collector() {
                     </div>
                   </div>
                   <div className="product-button">
-                    <Link to="/product-details" className="tf-button">
+                    <Link to="/item-detail" className="tf-button">
                       {" "}
                       <button className="secondary-btn">Purchase</button>
                     </Link>
@@ -219,7 +219,7 @@ function Collector() {
         <div className="slider-item">
           <div className="sc-product style1">
             <div className="top">
-              <Link to="/product-details" className="tag">
+              <Link to="/item-detail" className="tag">
                 R33LZ Blur #1
               </Link>
               <div className="wish-list">
@@ -256,7 +256,7 @@ function Collector() {
                   </div>
                 </div>
                 <div className="product-button">
-                  <Link to="/product-details" className="tf-button">
+                  <Link to="/item-detail" className="tf-button">
                     {" "}
                     <button className="secondary-btn">Purchase</button>
                   </Link>
@@ -270,7 +270,7 @@ function Collector() {
       <div className="slider-item">
         <div className="sc-product style1">
           <div className="top">
-            <Link to="/product-details" className="tag">
+            <Link to="/item-detail" className="tag">
               R33LZ Blur #1
             </Link>
             <div className="wish-list">
@@ -307,7 +307,7 @@ function Collector() {
                 </div>
               </div>
               <div className="product-button">
-                <Link to="/product-details" className="tf-button">
+                <Link to="/item-detail" className="tf-button">
                   {" "}
                   <button className="secondary-btn">Purchase</button>
                 </Link>
@@ -321,7 +321,7 @@ function Collector() {
     <div className="slider-item">
       <div className="sc-product style1">
         <div className="top">
-          <Link to="/product-details" className="tag">
+          <Link to="/item-detail" className="tag">
             R33LZ Blur #1
           </Link>
           <div className="wish-list">
@@ -358,7 +358,7 @@ function Collector() {
               </div>
             </div>
             <div className="product-button">
-              <Link to="/product-details" className="tf-button">
+              <Link to="/item-detail" className="tf-button">
                 {" "}
                 <button className="secondary-btn">Purchase</button>
               </Link>
@@ -372,7 +372,7 @@ function Collector() {
   <div className="slider-item">
     <div className="sc-product style1">
       <div className="top">
-        <Link to="/product-details" className="tag">
+        <Link to="/item-detail" className="tag">
           R33LZ Blur #1
         </Link>
         <div className="wish-list">
@@ -409,7 +409,7 @@ function Collector() {
             </div>
           </div>
           <div className="product-button">
-            <Link to="/product-details" className="tf-button">
+            <Link to="/item-detail" className="tf-button">
               {" "}
               <button className="secondary-btn">Purchase</button>
             </Link>
