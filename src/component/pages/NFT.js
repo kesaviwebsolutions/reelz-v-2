@@ -76,12 +76,12 @@ function NFT() {
     <div>
       <div className="container-kws">
         <div className="section">
-          <div className="d-f j-c-s-b">
+          <div className="d-f j-c-s-b m-b-2">
             <div className="f-s-2 f-w-600">Nfts</div>
             <div className=""></div>
           </div>
-        </div>
-        <div className="section">
+       
+        <div className="">
           <div className="row">
             {listings ? (
               listings.length > 0 ? (
@@ -169,6 +169,7 @@ function NFT() {
               />
             )}
           </div>
+        </div>
         </div>
       </div>
     </div>
