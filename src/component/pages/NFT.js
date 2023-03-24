@@ -115,7 +115,7 @@ function NFT() {
                               </div>
                               <div className="features">
                                 <div className="product-media">
-                                  <img src={res.image} alt="images" />
+                                  <img src={res.image} alt="images" className="h-13" />
                                 </div>
                               </div>
                               <div className="bottom">

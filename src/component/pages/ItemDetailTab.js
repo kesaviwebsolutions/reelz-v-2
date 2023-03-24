@@ -74,10 +74,10 @@ export default function BasicTabs({properties, owner}) {
           </div>
           <div className="">{addslice(owner)}</div>
         </div>
-        <div className="m-y-1">Properties</div>
+        <div className="m-t-1">Properties</div>
         {properties.map((res)=>{
           return <>
-          <span className="secondary-btn m-t-1 "> {res.trait_type}: {res.value}</span>
+          <div className="secondary-btn m-t-1  "> {res.trait_type}: {res.value}</div>
           <br/>
           </>
         })}

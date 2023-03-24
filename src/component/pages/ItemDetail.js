@@ -190,10 +190,18 @@ function ItemDetail() {
 
           <div className="m-t-2">
             <div className="row">
-              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 p-y-1">
-                <img src={iamge_uri} alt="" className="w-100 b-r-10" />
-              </div>
-              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 p-y-1">
+            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-y-1">
+                <div className="details-img">
+                  <div className="img-details">
+                    <img
+                      src={iamge_uri}
+                      alt=""
+                      className="image-details b-r-10"
+                    />
+                  </div>
+                </div>
+                </div>
+              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-y-1">
                 <div className="d-f j-c-s-b a-i-c">
                   <div className="">
                     <img src={detailowner} className="b-r-10" /> &nbsp; Trending
