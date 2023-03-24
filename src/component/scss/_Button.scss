@@ -57,3 +57,28 @@ input{
     background-color: var(--primary-color11) !important;
 }
 
+
+.secondary-btn-purchase {
+    border: 2px solid var(--color) !important;
+   
+    background-color: transparent !important;
+    color: var(--color) !important;
+  
+    // padding: 0.7rem 3rem !important;
+    border-radius: 1rem !important;
+    font-weight: 600;
+    width: 100% !important;
+    .bag-icon{
+        fill: var(--color) !important;
+    }
+    &:hover{
+        color: var(--background-color) !important;
+
+        background: var(--yellow) !important;
+       border-color: var(--yellow) !important;
+        .bag-icon{
+            fill: var(--background-color) !important;
+        }
+    }
+
+}

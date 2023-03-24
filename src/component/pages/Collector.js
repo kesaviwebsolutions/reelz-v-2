@@ -54,7 +54,7 @@ function Collector() {
                   <div className="product-button">
                     <Link to="/item-detail" className="tf-button">
                       {" "}
-                      <button className="secondary-btn">Purchase</button>
+                      <button className="secondary-btn-purchase pa-0_5">Purchase</button>
                     </Link>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ function Collector() {
                   <div className="product-button">
                     <Link to="/item-detail" className="tf-button">
                       {" "}
-                      <button className="secondary-btn">Purchase</button>
+                      <button className="secondary-btn-purchase pa-0_5">Purchase</button>
                     </Link>
                   </div>
                 </div>
@@ -156,7 +156,7 @@ function Collector() {
                   <div className="product-button">
                     <Link to="/item-detail" className="tf-button">
                       {" "}
-                      <button className="secondary-btn">Purchase</button>
+                      <button className="secondary-btn-purchase pa-0_5">Purchase</button>
                     </Link>
                   </div>
                 </div>
@@ -207,7 +207,7 @@ function Collector() {
                   <div className="product-button">
                     <Link to="/item-detail" className="tf-button">
                       {" "}
-                      <button className="secondary-btn">Purchase</button>
+                      <button className="secondary-btn-purchase pa-0_5">Purchase</button>
                     </Link>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ function Collector() {
                 <div className="product-button">
                   <Link to="/item-detail" className="tf-button">
                     {" "}
-                    <button className="secondary-btn">Purchase</button>
+                    <button className="secondary-btn-purchase pa-0_5">Purchase</button>
                   </Link>
                 </div>
               </div>
@@ -309,7 +309,7 @@ function Collector() {
               <div className="product-button">
                 <Link to="/item-detail" className="tf-button">
                   {" "}
-                  <button className="secondary-btn">Purchase</button>
+                  <button className="secondary-btn-purchase pa-0_5">Purchase</button>
                 </Link>
               </div>
             </div>
@@ -360,7 +360,7 @@ function Collector() {
             <div className="product-button">
               <Link to="/item-detail" className="tf-button">
                 {" "}
-                <button className="secondary-btn">Purchase</button>
+                <button className="secondary-btn-purchase pa-0_5">Purchase</button>
               </Link>
             </div>
           </div>
@@ -411,7 +411,7 @@ function Collector() {
           <div className="product-button">
             <Link to="/item-detail" className="tf-button">
               {" "}
-              <button className="secondary-btn">Purchase</button>
+              <button className="secondary-btn-purchase pa-0_5">Purchase</button>
             </Link>
           </div>
         </div>

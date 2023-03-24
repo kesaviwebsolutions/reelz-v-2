@@ -135,7 +135,7 @@ function NFT() {
                                   </div>
                                   <div className="product-button">
                                     <Link
-                                      to={`/product-details/${listings.indexOf(
+                                      to={`/item-detail/${listings.indexOf(
                                         res
                                       )}`}
                                       className="tf-button"
