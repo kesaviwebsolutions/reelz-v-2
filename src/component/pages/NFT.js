@@ -141,7 +141,7 @@ function NFT() {
                                       className="tf-button"
                                     >
                                       {" "}
-                                      <button className="secondary-btn">
+                                      <button className="secondary-btn-purchase pa-0_5">
                                         Purchase
                                       </button>
                                     </Link>
