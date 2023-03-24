@@ -107,7 +107,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/favourites" element={<Favourites />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/item-detail" element={<ItemDetail />} />
+          <Route path="/item-detail/:index" element={<ItemDetail />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />

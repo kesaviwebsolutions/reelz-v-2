@@ -39,11 +39,17 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export default function BasicTabs({properties, owner}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const addslice = (add) => {
+    const first = add.slice(0, 7);
+    const seoncds = add.slice(36);
+    return first + "..." + seoncds;
   };
 
   return (
@@ -64,10 +70,14 @@ export default function BasicTabs() {
           <div className="">
             <img src={detailowner} className="b-r-20" /> &nbsp;
           </div>
-          <div className="">0xd1Ffb...8Df53c</div>
+          <div className="">{addslice(owner)}</div>
         </div>
         <div className="m-y-1">Properties</div>
-        <span className="secondary-btn m-t-1 ">age : 12</span>
+        {properties.map((res)=>{
+          return <span className="secondary-btn m-t-1 "> {res.type}: {res.value}</span>
+        })}
+  
+
       </TabPanel>
       <TabPanel value={value} index={1}>
       <div className="history">
