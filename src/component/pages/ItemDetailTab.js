@@ -52,8 +52,6 @@ export default function BasicTabs({properties, owner}) {
     return first + "..." + seoncds;
   };
 
-   console.log(" properties", properties)
-
   return (
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -76,10 +74,7 @@ export default function BasicTabs({properties, owner}) {
         </div>
         <div className="m-t-1">Properties</div>
         {properties.map((res)=>{
-          return <>
-          <div className="secondary-btn m-t-1  "> {res.trait_type}: {res.value}</div>
-          <br/>
-          </>
+          return <div className="secondary-btn d-f m-t-1  "> {res.type}: {res.value}</div>
         })}
   
 

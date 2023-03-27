@@ -12,7 +12,6 @@ import {
   get_Marketplace_contract,
   get_NFT_contract_1155,
   get_NFT_contract_721,
-  towie,
 } from "../../Contracts/Web3";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -142,7 +141,7 @@ function ItemDetail() {
   const make_Offer = async () => {
     try {
       const data = await marketplaceContract.methods
-        .makeOffer(listingID, quantityTopuchase, priceOfOffer, offerExpireTime)
+        .makeOffer(listingID, quantity, priceOfOffer, offerExpireTime)
         .send({ from: wallet_address });
       if (data.status) {
         notify("Success");
@@ -165,22 +164,6 @@ function ItemDetail() {
     }
   };
 
-  const handletime = (value) => {
-    const time = Number(new Date(value).getTime() / 1000).toFixed(0);
-    setOfferExpireTime(time);
-  };
-  const handleamount = async(value) => {
-    const a = await towie(value)
-    setPriceOfOffer(a);
-  };
-  const handlequtantity = (value) => {
-    if (Number(value) > Number(quantity)) {
-      warning(`Qutantity should be less or equal to ${quantity}`);
-      return;
-    }
-    setQuantityToPuchase(value);
-  };
-
   console.log(owner);
   return (
     <div>
@@ -190,7 +173,7 @@ function ItemDetail() {
 
           <div className="m-t-2">
             <div className="row">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-y-1">
+              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-y-1">
                 <div className="details-img">
                   <div className="img-details">
                     <img
@@ -200,7 +183,7 @@ function ItemDetail() {
                     />
                   </div>
                 </div>
-                </div>
+              </div>
               <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-y-1">
                 <div className="d-f j-c-s-b a-i-c">
                   <div className="">
@@ -218,7 +201,7 @@ function ItemDetail() {
                   </div>
                 </div>
                 <div className="f-s-2 f-w-600 m-t-1">{NFT_name}</div>
-                <div className="m-t-1">{nft_discription}</div>
+                <div className="m-t-1 ">{nft_discription}</div>
                 <div className="m-t-1">
                   <ItemDetailTab properties={properties} owner={owner} />
                 </div>
@@ -299,7 +282,6 @@ function ItemDetail() {
               <div className="m-b-1">
                 <input
                   type="text"
-                  onChange={(e)=>handleamount(e.target.value)}
                   className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
                   placeholder="00.00 ETH"
                 />
@@ -307,7 +289,6 @@ function ItemDetail() {
               <div className="m-b-1">
                 <input
                   type="text"
-                  onChange={(e)=>handlequtantity(e.target.value)}
                   className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
                   placeholder="Quantity"
                 />
@@ -315,24 +296,23 @@ function ItemDetail() {
               <div className="m-b-1">
                 <input
                   type="datetime-local"
-                  onChange={(e)=>handletime(e.target.value)}
                   className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
                   placeholder="Quantity"
                 />
               </div>
               <div className="d-f j-c-s-b a-i-c m-b-1">
-                <div className="">Quantity on sale</div>
-                <div className="">{quantity}</div>
+                <div className="">You must bid at least:</div>
+                <div className="">4.89 ETH</div>
               </div>
-              {/* <div className="d-f j-c-s-b a-i-c m-b-1">
+              <div className="d-f j-c-s-b a-i-c m-b-1">
                 <div className="">Service free:</div>
                 <div className="">0,89 ETH</div>
               </div>
               <div className="d-f j-c-s-b a-i-c m-b-1">
                 <div className="">Total bid amount:</div>
-                <div className="">4 ETH</div> */}
-              {/* </div> */}
-              <div className="primary-btn m-b-1" onClick={()=>make_Offer()}>Place a bid</div>
+                <div className="">4 ETH</div>
+              </div>
+              <div className="primary-btn m-b-1">Place a bid</div>
             </div>
           </Modal.Body>
         </div>

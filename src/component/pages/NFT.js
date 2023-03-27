@@ -80,7 +80,7 @@ function NFT() {
             <div className="f-s-2 f-w-600">Nfts</div>
             <div className=""></div>
           </div>
-       
+     
         <div className="">
           <div className="row">
             {listings ? (
@@ -115,7 +115,7 @@ function NFT() {
                               </div>
                               <div className="features">
                                 <div className="product-media">
-                                  <img src={res.image} alt="images" className="h-13" />
+                                  <img src={res.image} alt="images" />
                                 </div>
                               </div>
                               <div className="bottom">
