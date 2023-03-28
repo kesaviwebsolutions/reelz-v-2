@@ -213,7 +213,296 @@ function Product() {
                     </div>
                     <div className="features">
                       <div className="product-media">
-                        <img src={1} className="" alt="" />
+                        <img src={img1} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img2} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img3} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img4} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img5} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img6} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img7} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img8} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img9} className="" alt="" />
+                      </div>
+                    </div>
+                    <div className="bottom">
+                      <div className="product-button">
+                        <Link to="/product-details" className="tf-button">
+                          {" "}
+                          <button className="secondary-btn">
+                            <BsFillHandbagFill className="b-c-t bag-icon" />{" "}
+                            &nbsp;Buy Now
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xxl-3 m-y-1">
+                <div className="slider-item">
+                  <div className="sc-product style1">
+                    <div className="top m-b-1">
+                      <Link to="/product-details" className="tag">
+                        Archetype #588
+                      </Link>
+                      <div className="wish-list">
+                        <Link to="#" className="heart-icon">
+                          <AiFillHeart className="b-c-t" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="features">
+                      <div className="product-media">
+                        <img src={img10} className="" alt="" />
                       </div>
                     </div>
                     <div className="bottom">
