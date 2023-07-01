@@ -15,6 +15,7 @@ import Profile from "./component/pages/Profile";
 import {_Wallet_connect_, _Metamask_, _Dissconnect_Wallet_, _Web3_provider_,GetChainId, getUserAddress} from "./Contracts/Web3";
 import Contact from "./component/pages/Contact";
 import Login from "./component/pages/Login";
+import Signup from "./component/pages/Signup";
 import MyProfile from "./component/pages/MyProfile";
 import Purchasehistory from './component/pages/Purchasehistory';
 import Favourites from "./component/pages/Favourites";
@@ -23,6 +24,8 @@ import { useStoreActions, useStoreState } from "easy-peasy";
 import ItemDetail from "./component/pages/ItemDetail";
 
 function App() {
+
+  const url = "https://abc";
 
   const setwallets = useStoreActions((actions) => actions.setWallet_address);
   const wallets = useStoreState((state) => state.wallet_address);
@@ -97,6 +100,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/form" element={<Form1 />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/product" element={<Product />} />
           <Route path="/my-profile" element={<MyProfile />} />
@@ -104,7 +108,7 @@ function App() {
           <Route path="/nft" element={<NFT />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/purchasehistory" element={<Purchasehistory />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login url={url} />} />
           <Route path="/favourites" element={<Favourites />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/item-detail/:index" element={<ItemDetail />} />
