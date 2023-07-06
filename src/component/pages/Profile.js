@@ -18,6 +18,9 @@ const onOk = (value) => {
 };
 
 function Profile() {
+  const usersignupupdateData = JSON.parse(
+    localStorage.getItem("gettinguserdetailsViaPhone")
+  );
   return (
     <div>
       <div className="m-t-4">

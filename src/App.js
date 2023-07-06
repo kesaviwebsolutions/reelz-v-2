@@ -25,7 +25,7 @@ import ItemDetail from "./component/pages/ItemDetail";
 
 function App() {
 
-  const url = "https://abc";
+  const url = "https://back-sg.r33lz.com";
 
   const setwallets = useStoreActions((actions) => actions.setWallet_address);
   const wallets = useStoreState((state) => state.wallet_address);
@@ -100,7 +100,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/form" element={<Form1 />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<Signup url={url}  />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/product" element={<Product />} />
           <Route path="/my-profile" element={<MyProfile />} />

@@ -7,6 +7,9 @@ import CategoriesSlider from "./CategoriesSlider";
 import { Link } from "react-router-dom";
 
 function Home() {
+  const usersignupupdateData = JSON.parse(
+    localStorage.getItem("gettinguserdetailsViaPhone")
+  );
   return (
     <>
       <div className="container-kws">

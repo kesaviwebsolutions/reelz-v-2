@@ -10,7 +10,7 @@ const notifyError = (msg) => toast.error(msg);
 function Login({ url }) {
 
   const [Error, setError] = useState(false);
-  const [username, setUsername] = useState();
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
 
@@ -29,9 +29,10 @@ function Login({ url }) {
     try {
       e.preventDefault();
       setOpen(true);
-      await axios.post(`${url}/api/users`, {
-        name: username,
+      await axios.post(`https://back-sg.r33lz.com/authentication_token`, {
+        email: email,
         plainPassword: password,
+        syncFirebase:true,
 
       })
         .then((res) => {
@@ -50,8 +51,8 @@ function Login({ url }) {
 
     } catch (error) {
 
-      setError(error.response.data.message);
-      notifyError(error.response.data.message);
+      setError(error);
+      notifyError(error);
       setOpen(false);
     }
   };
@@ -59,6 +60,7 @@ function Login({ url }) {
     <div>
       <div className="container-kws">
         <div className="section">
+          <form onSubmit={login}>
           <div className="row">
             <div className="col-12 col-sm-9 col-md-6 m-a">
               <div className="t-a-c f-s-2 f-w-600 m-b-1">
@@ -73,9 +75,9 @@ function Login({ url }) {
                 <input
                   type="text"
                   className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
-                  placeholder="User Name"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="m-b-1">
@@ -92,25 +94,25 @@ function Login({ url }) {
                 <div className="">Forgot Password?</div>
               </div>
               <div className="">
-                <button className="primary-btn w-100">Login</button>
+                <button className="primary-btn w-100" type="submit">Login</button>
               </div>
-              {/*    <div className="t-a-c m-t-2">Getting started <Link to="/signup"> sign up here</Link></div> */}
+         <div className="t-a-c m-t-2">Getting started <Link to="/signup"> sign up here</Link></div> 
             </div>
-          </div>
+            </div>
+            
+            </form>
         </div>
       </div>
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={open}
-        className="d-b t-a-c "
+       
       >
-        <div className="d-b m-t-50vh">
+   
           {" "}
           <CircularProgress color="inherit" />
-        </div>
-        <div className="d-b">
 
-        </div>
+      
       </Backdrop>
     </div>
   );

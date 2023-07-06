@@ -60,6 +60,10 @@ function Navbar({ Metamask, Dissconnect, WalletC }) {
     return first + "..." + seconds
   }
 
+  const usersignupupdateData = JSON.parse(
+    localStorage.getItem("gettinguserdetailsViaPhone")
+  );
+
   return (
     <>
       <div className="container-kws t-t-u">
@@ -98,9 +102,10 @@ function Navbar({ Metamask, Dissconnect, WalletC }) {
                 {" "}
                 <li className="m-r-2 c-p f-w-600   m-q-b-d-n">NFT's</li>
               </NavLink>
-              <NavLink className="nav" to="/login">
-                <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Login</li>
-              </NavLink>
+              {usersignupupdateData?"": <NavLink className="nav" to="/login">
+              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Login</li>
+            </NavLink>}
+             
             </ul>
           </div>
           <div className=" c-p ">
@@ -124,17 +129,19 @@ function Navbar({ Metamask, Dissconnect, WalletC }) {
                   {wallets ? manageAddress(wallets) : "Connect Wallet"}
                 </Button>
               </li>
-              <NavLink to="/profile">
-                <li className="m-l-2 c-p   m-q-b-d-n ">
-                  <CgProfile className="f-s-1_5" />
-                </li>
-              </NavLink>
+              {usersignupupdateData?    <NavLink to="/profile">
+              <li className="m-l-2 c-p   m-q-b-d-n ">
+               {/*    <CgProfile className="f-s-1_5" /> */}
+                  <img src={usersignupupdateData.profilePicture.profilePicture_profile} alt="" className="w-3" />
+              </li>
+            </NavLink>:""}
+          
               <NavLink to="/cart">
                 <li className="m-l-2 c-p   m-q-b-d-n ">
                   <AiOutlineShoppingCart className="f-s-1_5" />
                 </li>
               </NavLink>
-              <li className="m-l-2 c-p   m-q-b-d-n ">95R</li>
+          {/* <li className="m-l-2 c-p   m-q-b-d-n ">95R</li> */}
               <li className="m-l-2 c-p   m-q-a-d-n ">
                 {" "}
                 <Button onClick={handleShow} className=" b-c-t c-i b-n pa-0">
