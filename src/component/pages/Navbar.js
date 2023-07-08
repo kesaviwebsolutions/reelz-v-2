@@ -102,8 +102,8 @@ function Navbar({ Metamask, Dissconnect, WalletC }) {
                 {" "}
                 <li className="m-r-2 c-p f-w-600   m-q-b-d-n">NFT's</li>
               </NavLink>
-              {usersignupupdateData?"": <NavLink className="nav" to="/login">
-              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Login</li>
+              {usersignupupdateData?"": <NavLink className="nav" to="/signup">
+              <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Signup</li>
             </NavLink>}
              
             </ul>

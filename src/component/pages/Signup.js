@@ -69,14 +69,14 @@ function Login({ url }) {
           <div className="row">
             <form onSubmit={signup}>
               <div className="col-12 col-sm-9 col-md-6 m-a">
-                <div className="t-a-c f-s-2 f-w-600 m-b-1">
-                  What is Lorem Ipsum?
+                <div className="t-a-c f-s-2 f-w-600 m-b-3">
+             Signup
                 </div>
-                <div className="t-a-c m-b-2">
+            {/*     <div className="t-a-c m-b-2">
                   Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry.
                 </div>
-                <div className="t-a-c m-b-2">Or login with account</div>
+                <div className="t-a-c m-b-2">Or login with account</div> */}
                 <div className="m-b-1">
                   <input
                     type="text"
@@ -120,11 +120,11 @@ function Login({ url }) {
             placeholder="Confirm Password"
           />
         </div> */}
-                <div className="m-b-2 d-f j-c-s-b">
+               {/*  <div className="m-b-2 d-f j-c-s-b">
                   <div className="">Remember for 30 days</div>
                   <div className="">Forgot Password?</div>
-                </div>
-                <div className="">
+                </div> */}
+                <div className="m-t-2">
                   <button className="primary-btn w-100" type="Submit">Signup</button>
                 </div>
                 <div className="t-a-c m-t-2">Already have an account <Link to="/login"> login here</Link></div>

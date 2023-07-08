@@ -12,7 +12,7 @@ function ProfileSidebar() {
 
   const logout = () => {
     localStorage.removeItem("gettinguserdetailsViaPhone");
-    window.location.href("/");
+    window.location.href = `/`;
   }
   
 
@@ -23,10 +23,9 @@ function ProfileSidebar() {
       <div className="t-a-c">
       <img src={usersignupupdateData.profilePicture.profilePicture_lg_profile} className="b-r-50 m-b-2 " />
       </div>
-        <div className="f-s-2 f-w-600 m-b-1 t-a-c ">Reelz User</div>
+        <div className="f-s-2 f-w-600 m-b-1 t-a-c ">{usersignupupdateData.name}</div>
         <div className="t-a-c m-b-2 p-x-1">
-          Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
-          Industry.
+        {usersignupupdateData.bio}
         </div>{" "}
         <div className="account-setting  c-p f-w-600">
           <NavLink to="/profile" className="sidebar pa-1 d-b">

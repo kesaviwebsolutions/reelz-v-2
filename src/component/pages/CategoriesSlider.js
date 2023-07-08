@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from 'swiper';
@@ -8,10 +8,34 @@ import Reelz from "../Image/Reelz-62.gif";
 // Import Swiper styles
 import "swiper/css";
 import categoryimg from "../Image/categoryimg.jpg";
+import axios from "axios";
 
 // import "./styles.css";
 
 export default function App() {
+
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+      fetchData();
+    }, []);
+    
+    const fetchData = () => {
+      axios
+        .get('https://back-sg.r33lz.com/api/categories?page=1&itemsPerPage=30&homepage=true')
+        .then(function (response) {
+          const fetchedCategories = response.data['hydra:member'];
+          const categoryTitles = fetchedCategories.map(category => category.title);
+          setCategories(categoryTitles);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    };
+    
+    console.log("categories", categories);
+
+
     return (
         <>
             <Swiper
@@ -42,38 +66,16 @@ export default function App() {
                     disableOnInteraction: true,
                 }}
             >
-                <SwiperSlide>
-                    <div className="ps-r">
-                        <img src={categoryimg} className="w-100 b-r-20" />
-                        <div className="img-title">Sport</div>
-                    </div>
+              
+            {categories.map(category => (
+                <SwiperSlide key={category}>
+                  <div className="ps-r">
+                    <img src={categoryimg} className="w-100 b-r-20" />
+                    <div className="img-title">{category}</div>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <div className="ps-r">
-                        <img src={categoryimg} className="w-100 b-r-20" />
-                        <div className="img-title">Sport</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="ps-r">
-                        <img src={categoryimg} className="w-100 b-r-20" />
-                        <div className="img-title">Sport</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="ps-r">
-                        <img src={categoryimg} className="w-100 b-r-20" />
-                        <div className="img-title">Sport</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="ps-r">
-                        <img src={categoryimg} className="w-100 b-r-20" />
-                        <div className="img-title">Sport</div>
-                    </div>
-                </SwiperSlide>
-
-
+              ))}
+              
             </Swiper>
         </>
     );
