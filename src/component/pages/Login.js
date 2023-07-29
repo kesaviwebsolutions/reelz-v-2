@@ -82,7 +82,7 @@ function Login({ url }) {
               </div>
               <div className="m-b-1">
                 <input
-                  type="text"
+                  type="password"
                   className="b-c-p-c-11 b-n pa-0_5 w-100 b-r-10"
                   placeholder="Password"
                   value={password}

@@ -105,6 +105,9 @@ function Navbar({ Metamask, Dissconnect, WalletC }) {
               {usersignupupdateData?"": <NavLink className="nav" to="/signup">
               <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Signup</li>
             </NavLink>}
+            {usersignupupdateData?"": <NavLink className="nav" to="/login">
+            <li className="m-r-2 c-p f-w-600   m-q-b-d-n">Signin</li>
+          </NavLink>}
              
             </ul>
           </div>
